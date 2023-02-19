@@ -1,8 +1,11 @@
 <a name="readme-top"> </a>
 
 ## Contributors
-
+[![El][el-badge]][el-url]
+[![Sarah][sarah-badge]][sarah-url]
+[![Faye][faye-badge]][faye-url]
 [![Patt][patt-badge]][patt-url]
+
 
 <br />
 <div align="center">
@@ -57,17 +60,7 @@ Add Project description
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
 
-- [![Javascript][javascript.js]][javascript-url]
-- [![CSS][css]][css-url]
-- [![HTML][html]][html-url]
-- [![Webpack][webpack]][webpack-url]
-- [![API][api]][api-url]
-- [![Mocha][mocha]][mocha-url]
-- [![Chai][chai]][chai-url]
-- [![Git][git]][git-url]
-- [![GitHub][github]][github-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -132,25 +125,37 @@ See the [open issues](https://github.com/pattpjy/ps-reactideabox/issues) for a f
 - need update
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+### Built With
 
-[ian-badge]: https://img.shields.io/badge/-Ian%20Nordby-orange
-[ian-url]: https://github.com/nordbyi
+- [![Javascript][javascript.js]][javascript-url]
+- [![CSS][css]][css-url]
+- [![HTML][html]][html-url]
+- [![Webpack][webpack]][webpack-url]
+- [![API][api]][api-url]
+- [![Mocha][mocha]][mocha-url]
+- [![Chai][chai]][chai-url]
+- [![Git][git]][git-url]
+- [![GitHub][github]][github-url]
+- [![React][react]][react-url]
+- [![Cypress][cypress]][cypress-url]
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+[el-badge]: https://img.shields.io/badge/-El%20Brewster-orange
+[el-url]: https://github.com/ElBrewster
 [patt-badge]: https://img.shields.io/badge/-Patt%20Sookmark-brightgreen
 [patt-url]: https://github.com/pattpjy
-[rae-badge]: https://img.shields.io/badge/-Rae%20Gebhart-blue
-[rae-url]: https://github.com/rae-107
-[jordan-badge]: https://img.shields.io/badge/-Jordan%20Smith-lightgrey
-[jordan-url]: https://github.com/jaysmith2022
+[sarah-badge]: https://img.shields.io/badge/-Sarah%20Hampton-blue
+[sarah-url]: https://github.com/SHampton22
+[faye-badge]: https://img.shields.io/badge/-Faye%20Rosenshein-lightgrey
+[faye-url]: https://github.com/FayeRosenshein
 [mocha]: https://img.shields.io/badge/Mocha-FF2D20?style=for-the-badge&logo=mocha&logoColor=white
 [mocha-url]: https://mochajs.org/
 [chai]: https://img.shields.io/badge/Chai-20232A?style=for-the-badge&logo=chai&logoColor=61DAFB
 [chai-url]: https://www.chaijs.com/
 [webpack]: https://img.shields.io/badge/Webpack-563D7C?style=for-the-badge&logo=webpack&logoColor=white
 [webpack-url]: https://webpack.js.org/
-[dayjs]: https://img.shields.io/badge/-dayjs-fb6052?style=for-the-badge
-[dayjs-url]: https://www.npmjs.com/package/dayjs
-[chart.js]: https://img.shields.io/badge/Chart.js-35495E?style=for-the-badge&logo=chartdotjs&logoColor=4FC08D
-[chart.js-url]: https://www.chartjs.org/
 [css]: https://img.shields.io/badge/CSS-000000?style=for-the-badge&logo=css&logoColor=white
 [css-url]: https://www.w3.org/Style/CSS/Overview.en.html
 [html]: https://img.shields.io/badge/HTML-4A4A55?style=for-the-badge&logo=HTML&logoColor=FF3E00
@@ -163,3 +168,7 @@ See the [open issues](https://github.com/pattpjy/ps-reactideabox/issues) for a f
 [github-url]: https://github.com/
 [git]: https://img.shields.io/badge/Git-2E0305?style=for-the-badge&logo=git&logoColor=FF3E00
 [git-url]: https://git-scm.com/
+[react]:https://shields.io/badge/react-black?logo=react&style=for-the-badge
+[react-url]:https://reactjs.org/
+[cypress]:https://shields.io/badge/cypress-4A4A55?logo=cypress&style=for-the-badge
+[cypress-url]:https://www.cypress.io/
