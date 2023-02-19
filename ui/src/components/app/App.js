@@ -17,7 +17,7 @@ function App() {
 				<Route path='/AllActivities' element={<AllActivities />}/>
 				<Route path='/ToDos' element={<ToDos />} />
 				<Route path='/ActivityInfoView' element={<ActivityInfoView />}/>
-				<Route path='*' element={<ErrorPage />}/>
+				{/* <Route path='*' element={<ErrorPage />}/> */}
 			</Routes>
     </main>
   );
