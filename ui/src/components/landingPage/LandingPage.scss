@@ -1,0 +1,13 @@
+.landing {
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 80%;
+}
+
+.find,
+.go {
+    background-color: green;
+    color: purple;
+}
