@@ -1,15 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import './ActivityCard.scss'
-import {AiOutlineCheckCircle} from "react-icons/ai"
-import {AiFillCheckCircle} from "react-icons/ai"
+import {BsBookmark} from "react-icons/bs"
+import {BsFillBookmarkFill} from "react-icons/bs"
 
 export default function ActivityCard({title,startAge,endAge}) {
+	
 	return (
 		<section>
 			<p>{title}</p>
-			<p>{startAge} {endAge}</p>
+			<p>{startAge}-{endAge}</p>
 			<img alt='Some-text'/>
-			<AiOutlineCheckCircle />
+			<BsBookmark type='button' alt='blankBookmark' />
 		</section>
 	)
 }
