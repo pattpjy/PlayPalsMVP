@@ -1,19 +1,19 @@
 import './App.scss';
 import React from "react";
-import HeaderNav from "./components/HeaderNav";
-import LandingPage from "./components/LandingPage";
-import AllActivities from "./components/AllActivities";
-import ToDos from "./components/ToDos";
-import ActivityInfo from "./components/ActivityInfo";
+import HeaderNav from "../headerNav/HeaderNav";
+import LandingPage from "../landingPage/LandingPage";
+import AllActivities from "../allActivities/AllActivities";
+import ToDos from "../todo/ToDos";
+import ActivityInfoView from "../activityInfoView/ActivityInfoView";
 
 function App() {
   return (
     <main>
       <HeaderNav />
-      <LandingPage />
+      {/* <LandingPage />
       <AllActivities />
       <ToDos />
-      <ActivityInfo />
+      <ActivityInfoView /> */}
     </main>
   );
 }

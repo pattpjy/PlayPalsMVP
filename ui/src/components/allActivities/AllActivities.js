@@ -1,7 +1,7 @@
 import React from "react";
 import "./AllActivities.scss";
-import Filter from "./Filter.js";
-import ActivityCard from "./ActivityCard.js";
+import Filter from "../filter/Filter";
+import ActivityCard from "../thumbnailActivity/ActivityCard";
 
 export default function AllActivities() {
     return (
