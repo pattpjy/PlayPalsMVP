@@ -50,9 +50,6 @@
 ## About The Project
 
 
-
-
-
 Add vdo walk through
 
 Add Project description 
@@ -60,10 +57,6 @@ Add Project description
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started
 
@@ -84,7 +77,7 @@ Add Project description
    ```
 5. Use the Link that is given in the Terminal & Open in Browser
    ```sh
-   Example: http://localhost:8080/
+   Example: http://localhost:3000/
    ```
    
 ## API Installation
@@ -125,6 +118,7 @@ See the [open issues](https://github.com/pattpjy/ps-reactideabox/issues) for a f
 - need update
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Built With
 
 - [![Javascript][javascript.js]][javascript-url]
