@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AllActivities.scss";
 import Filter from "../filter/Filter";
 import ActivityCard from "../thumbnailActivity/ActivityCard";
-import activitiesData from "../../apiCall/dummyData";
+import activitiesData from "../../apiCalls/dummyData.js";
 
 
-export default function AllActivities({ allActivities}) {
-	const activityCards = allActivities.map(activity => {
+export default function AllActivities() {
+	const [activities, setActivityData] = useState(activitiesData.activities);
+	console.log(activities);
+	const activityOptions = Object.keys(activities[0]);
+
+	const activityCards = activities.map(activity => {
 		return (
 			<ActivityCard
 				key={activity.id}
@@ -19,12 +23,15 @@ export default function AllActivities({ allActivities}) {
 				instructions={activity.instructions}
 				indoor={activity.indoor}
 				outdoor={activity.outdoor}
-				motorSkill={activity.motorSkill} />
+				motorSkill={activity.motorSkill} 
+			/>
 		)
-	})
+	});
+
 	return (
 		<section className="all-activities-section">
-			<Filter />
+			<p>this is all activities</p>
+			<Filter isMulti placeHolder="Select..." options={activityOptions} />
 			<div className='activity-container'>
 				{activityCards}
 			</div>
