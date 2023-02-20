@@ -1,13 +1,22 @@
+@use "src/index.scss" as *;
+
 .landing {
-    background-color: purple;
+    align-items: center;
+    background-color: $lightPinkPurple;
+    color: $purpleberry;
     display: flex;
     flex-direction: column;
     height: 80%;
+    justify-content: space-evenly;
     width: 80%;
 }
 
 .find,
 .go {
-    background-color: green;
-    color: purple;
+    background-color: $pink;
+    border-radius: .2em;
+    border: .1em solid $candy;
+    color: $intensePink;
+    height: 3em;
+    width: 15em;
 }
