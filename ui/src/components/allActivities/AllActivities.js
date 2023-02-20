@@ -10,6 +10,7 @@ export default function AllActivities({ allActivities}) {
 			<ActivityCard
 				key={activity.id}
 				id={activity.id}
+				image={activity.path}
 				startAge={activity.startAge}
 				endAge={activity.endAge}
 				name={activity.name}

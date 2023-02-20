@@ -1,15 +1,22 @@
 .activity-card {
+	background-color: brown;
 	border-radius: 4px;
+	border: 1px solid black;
   padding: 5px;
-  width: 150px;
+  width: 70%
 }
 
 img {
   border-radius: 5px;
+	width: 50%;
 }
 
 .activity-name {
 	color: black;
   text-decoration: none;
   margin: 0;
+}
+
+.title {
+	
 }
