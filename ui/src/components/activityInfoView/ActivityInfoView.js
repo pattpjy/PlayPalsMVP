@@ -7,12 +7,12 @@ import { AiFillHeart } from "react-icons/ai"
 import { BsBookmark } from "react-icons/bs"
 import { BsFillBookmarkFill } from "react-icons/bs"
 
-export default function ActivityInfoView({title,startAge,endAge, materials,instructions}) {
+export default function ActivityInfoView({ name, startAge, endAge, materials, instructions, image}) {
 	return (
 		<section>
-			<p>{title}</p>
+			<p>{name}</p>
 			<p>{startAge}-{endAge}</p>
-			<img alt={title} />
+			<img src={image} alt={name} />
 			<p>{materials}</p>
 			<p>{instructions}</p>
 			<BsBookmark type='button' alt='blankBookmark' />
