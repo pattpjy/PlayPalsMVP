@@ -42,9 +42,10 @@
 }
 
 .trying-out-colors {
+  align-self: flex-end;
   display: flex;
   flex-direction: row;
-  align-self: flex-end;
+  flex-wrap: wrap;
   p {
     font-size: 1em;
     height: 1em;
