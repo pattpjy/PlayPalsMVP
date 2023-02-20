@@ -1,11 +1,11 @@
-<a name="readme-top"> </a>
+<a name="readme-top">Testing </a>
 
 ## Contributors
+
 [![El][el-badge]][el-url]
 [![Sarah][sarah-badge]][sarah-url]
 [![Faye][faye-badge]][faye-url]
 [![Patt][patt-badge]][patt-url]
-
 
 <br />
 <div align="center">
@@ -49,14 +49,11 @@
 
 ## About The Project
 
-
 Add vdo walk through
 
-Add Project description 
-
+Add Project description
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## Getting Started
 
@@ -79,11 +76,11 @@ Add Project description
    ```sh
    Example: http://localhost:3000/
    ```
-   
+
 ## API Installation
 
 6. Clone the repo
-      ```sh
+   ```sh
    git clone git@github.com:xxxx
    ```
 7. cd into it from terminal
@@ -100,6 +97,7 @@ Add Project description
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ARCHITECTURE -->
+
 ## Architecture
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -111,6 +109,7 @@ Add Project description
 - [] Need update
 
 See the [open issues](https://github.com/pattpjy/ps-reactideabox/issues) for a full list of proposed features (and known issues).
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Future Additions
@@ -133,8 +132,6 @@ See the [open issues](https://github.com/pattpjy/ps-reactideabox/issues) for a f
 - [![React][react]][react-url]
 - [![Cypress][cypress]][cypress-url]
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 [el-badge]: https://img.shields.io/badge/-El%20Brewster-orange
 [el-url]: https://github.com/ElBrewster
@@ -162,7 +159,7 @@ See the [open issues](https://github.com/pattpjy/ps-reactideabox/issues) for a f
 [github-url]: https://github.com/
 [git]: https://img.shields.io/badge/Git-2E0305?style=for-the-badge&logo=git&logoColor=FF3E00
 [git-url]: https://git-scm.com/
-[react]:https://shields.io/badge/react-black?logo=react&style=for-the-badge
-[react-url]:https://reactjs.org/
-[cypress]:https://shields.io/badge/cypress-4A4A55?logo=cypress&style=for-the-badge
-[cypress-url]:https://www.cypress.io/
+[react]: https://shields.io/badge/react-black?logo=react&style=for-the-badge
+[react-url]: https://reactjs.org/
+[cypress]: https://shields.io/badge/cypress-4A4A55?logo=cypress&style=for-the-badge
+[cypress-url]: https://www.cypress.io/

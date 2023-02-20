@@ -1,12 +1,12 @@
-import './App.scss';
+import "./App.scss";
 import React from "react";
-import {Routes, Route} from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
 import HeaderNav from "../headerNav/HeaderNav";
 import LandingPage from "../landingPage/LandingPage";
 import AllActivities from "../allActivities/AllActivities";
 import ToDos from "../todo/ToDos";
 import ActivityInfoView from "../activityInfoView/ActivityInfoView";
-import { Form } from 'react-router-dom';
+import { Form } from "react-router-dom";
 
 function App() {
   return (
@@ -33,6 +33,7 @@ function App() {
         <p className="light-blue">lightBlue&nbsp;</p>
         <p className="pink">pink&nbsp;</p>
       </section>
+
     </main>
   );
 }
