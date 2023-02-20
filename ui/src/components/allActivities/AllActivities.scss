@@ -1,7 +1,17 @@
 .all-activities-section {
-    background-color: purple;
-    display: flex;
-    flex-direction: column;
-    height: 80%;
-    width: 80%;
+	background-color: purple;
+	display: flex;
+	flex-direction: column;
+	height: 80%;
+	width: 80%;
+}
+
+.activity-container {
+	// background-color: #C27842;
+	border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
 }
