@@ -9,6 +9,8 @@ import ActivityInfoView from "../activityInfoView/ActivityInfoView";
 import { Form } from 'react-router-dom';
 import activities from "../../api/dummyData";
 import { useEffect, useState } from 'react';
+import ErrorPage from "../errorPage/ErrorPage";
+
 
 function App() {
 	const [allActivities, setAllActivities] = useState([])
@@ -24,7 +26,7 @@ function App() {
 				<Route path='/AllActivities' element={<AllActivities allActivities={allActivities}/>}/>
 				<Route path='/ToDos' element={<ToDos />} />
 				<Route path='/ActivityInfoView' element={<ActivityInfoView />}/>
-				{/* <Route path='*' element={<ErrorPage />}/> */}
+				<Route path='*' element={<ErrorPage />}/>
 			</Routes>
       <section className="trying-out-colors">
         <p className="cherry">&nbsp;cherry&nbsp;</p>
