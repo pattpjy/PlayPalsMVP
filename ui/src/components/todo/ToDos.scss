@@ -1,5 +1,7 @@
+@use "src/index.scss" as *;
+
 .to-do-container {
-    background-color: purple;
+    background-color: $lightBlue;
     display: flex;
     flex-direction: column;
     height: 80%;

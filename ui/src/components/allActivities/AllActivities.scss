@@ -1,5 +1,7 @@
+@use "src/index.scss" as *;
+
 .all-activities-section {
-    background-color: purple;
+    background-color: $lightLavendar;
     display: flex;
     flex-direction: column;
     height: 80%;
