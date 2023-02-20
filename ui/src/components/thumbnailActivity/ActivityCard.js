@@ -3,13 +3,13 @@ import './ActivityCard.scss'
 import {BsBookmark} from "react-icons/bs"
 import {BsFillBookmarkFill} from "react-icons/bs"
 
-export default function ActivityCard({title,startAge,endAge}) {
+export default function ActivityCard({id,name,startAge,endAge}) {
 	
 	return (
-		<section className='activity-card'>
-			<p>{title}</p>
+		<section id={id}className='activity-card'>
+			<p className='activity-name'>{name}</p>
 			<p>{startAge}-{endAge}</p>
-			<img alt='Some-text'/>
+			<img alt={name}/>
 			<BsBookmark type='button' alt='blankBookmark' />
 		</section>
 	)
