@@ -9,7 +9,7 @@ export default function AllActivities() {
   return (
     <section className="all-activities-section">
       <p>this is all activities</p>
-      <Filter placeHolder="Select..." options={activityOptions} />
+      <Filter isMulti placeHolder="Select..." options={activityOptions} />
       {/* <ActivityCard /> */}
     </section>
   );

@@ -32,7 +32,7 @@ const Filter = ({ placeHolder, options, isMulti }) => {
         <div className="dropdown-tags">
           {selectedValue.map((option) => (
             <div key={option.id} className="dropdown-tag-item">
-              {option.label}
+              {option}
               <span
                 onClick={(e) => onTagRemove(e, option)}
                 className="dropdown-tag-close"
@@ -47,7 +47,7 @@ const Filter = ({ placeHolder, options, isMulti }) => {
     return selectedValue.label;
   };
   const removeOption = (option) => {
-    return selectedValue.filter((o) => o.label !== option.label);
+    return selectedValue.filter((o) => o.id !== option.id);
   };
   const onTagRemove = (e, option) => {
     e.stopPropagation();
@@ -57,13 +57,13 @@ const Filter = ({ placeHolder, options, isMulti }) => {
   const onItemClick = (option) => {
     let newValue;
     if (isMulti) {
-      if (selectedValue.findIndex((o) => o.label === option.label) >= 0) {
+      if (selectedValue.findIndex((o) => o.id === option.id) >= 0) {
         newValue = removeOption(option);
       } else {
-        newValue = [...selectedValue, option];
+        newValue = [...selectedValue, option.label];
       }
     } else {
-      newValue = option;
+      newValue = option.label;
     }
     setSelectedValue(newValue);
   };
