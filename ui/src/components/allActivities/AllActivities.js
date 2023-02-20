@@ -4,13 +4,30 @@ import Filter from "../filter/Filter";
 import ActivityCard from "../thumbnailActivity/ActivityCard";
 import activitiesData from "../../apiCall/dummyData";
 
-export default function AllActivities() {
-  const activityOptions = Object.keys(activitiesData.activities[0]);
-  return (
-    <section className="all-activities-section">
-      <p>this is all activities</p>
-      <Filter isMulti placeHolder="Select..." options={activityOptions} />
-      {/* <ActivityCard /> */}
-    </section>
-  );
+
+export default function AllActivities({ allActivities}) {
+	const activityCards = allActivities.map(activity => {
+		return (
+			<ActivityCard
+				key={activity.id}
+				id={activity.id}
+				image={activity.path}
+				startAge={activity.startAge}
+				endAge={activity.endAge}
+				name={activity.name}
+				matertials={activity.materials}
+				instructions={activity.instructions}
+				indoor={activity.indoor}
+				outdoor={activity.outdoor}
+				motorSkill={activity.motorSkill} />
+		)
+	})
+	return (
+		<section className="all-activities-section">
+			<Filter />
+			<div className='activity-container'>
+				{activityCards}
+			</div>
+		</section>
+	);
 }
