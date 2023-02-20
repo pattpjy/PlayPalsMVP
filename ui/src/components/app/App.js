@@ -6,7 +6,7 @@ import LandingPage from "../landingPage/LandingPage";
 import AllActivities from "../allActivities/AllActivities";
 import ToDos from "../todo/ToDos";
 import ActivityInfoView from "../activityInfoView/ActivityInfoView";
-import { Form } from "react-router-dom";
+import ErrorPage from "../errorPage/ErrorPage";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
 				<Route path='/AllActivities' element={<AllActivities />}/>
 				<Route path='/ToDos' element={<ToDos />} />
 				<Route path='/ActivityInfoView' element={<ActivityInfoView />}/>
-				{/* <Route path='*' element={<ErrorPage />}/> */}
+				<Route path='*' element={<ErrorPage />}/>
 			</Routes>
       <section className="trying-out-colors">
         <p className="cherry">&nbsp;cherry&nbsp;</p>
