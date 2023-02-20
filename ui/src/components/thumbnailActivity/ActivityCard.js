@@ -6,7 +6,7 @@ import {BsFillBookmarkFill} from "react-icons/bs"
 export default function ActivityCard({title,startAge,endAge}) {
 	
 	return (
-		<section>
+		<section className='activity-card'>
 			<p>{title}</p>
 			<p>{startAge}-{endAge}</p>
 			<img alt='Some-text'/>
