@@ -10,7 +10,7 @@ export default function Profile() {
             <p>"reassurance"</p>
             <p>Look at all the things we've done together!</p>
             <p>I'm a good parent and it doesn't matter what activities I did, just that I did activities with my kid!</p>
-            <p>Possibly some logic to display stats, like, "seems like you guys like 'hiking' the most!"</p>
+            <p>NEED LOGIC: to display stats, like, "seems like you guys like 'hiking' the most!"</p>
             //wishlist: be able to print report card 
         </section>
     );

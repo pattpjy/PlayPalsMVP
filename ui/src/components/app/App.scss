@@ -1,5 +1,9 @@
-.App {
+@use "src/index.scss" as *;
+
+.main-app {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .App-logo {
@@ -35,4 +39,63 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.trying-out-colors {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  p {
+    font-size: 1em;
+    height: 1em;
+  }
+}
+
+.cherry{
+  background-color: $lightBlue;
+  color: $cherry;
+}
+.intense-pink{
+  background-color: $pink;
+  color: $intensePink;
+}
+.red{
+  background-color: $lightPinkPurple;
+  color: $red;
+}
+.blueberry{
+  background-color: $ocean;
+  color: $blueberry;
+}
+.purpleberry{
+  background-color: $teal;
+  color: $purpleberry;
+}
+.candy{
+  background-color: $cherry;
+  color: $candy;
+}
+.light-pink-purple{
+  background-color: $blueberry;
+  color: $lightPinkPurple;
+}
+.light-lavendar{
+  background-color: $lightPinkPurple;
+  color: $lightLavendar;
+}
+.ocean{
+  background-color: $candy;
+  color: $ocean;
+}
+.teal{
+  background-color: $pink;
+  color: $teal;
+}
+.light-blue{
+  background-color: $ocean;
+  color: $lightBlue;
+}
+.pink{
+  background-color: $purpleberry;
+  color: $pink;
 }

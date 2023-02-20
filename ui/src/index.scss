@@ -1,4 +1,18 @@
+$cherry: rgb(205, 32, 72);
+$intensePink: rgb(213, 22, 85);
+$red: rgb(221, 30, 24);
+$blueberry: rgb(7, 57, 155);
+$purpleberry: rgb(5, 15, 153);
+$candy: rgb(250, 93, 253);
+$lightPinkPurple: rgb(242, 182, 231);
+$lightLavendar: rgb(213, 216, 252);
+$ocean: rgb(64, 206, 231);
+$teal: rgb(73, 243, 221);
+$lightBlue: rgb(166, 215, 251);
+$pink: rgb(253, 158, 148);
+
 body {
+  background-color: $lightLavendar;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
