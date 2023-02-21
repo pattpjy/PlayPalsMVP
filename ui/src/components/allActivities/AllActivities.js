@@ -5,12 +5,12 @@ import ActivityCard from "../thumbnailActivity/ActivityCard";
 import activitiesData from "../../apiCalls/dummyData.js";
 
 
-export default function AllActivities() {
-	const [activities, setActivityData] = useState(activitiesData.activities);
-	console.log(activities);
-	const activityOptions = Object.keys(activities[0]);
+export default function AllActivities({allActivities}) {
+	// const [activities, setActivityData] = useState(activitiesData.activities);
+	console.log(allActivities);
+	const activityOptions = Object.keys(allActivities[0]);
 
-	const activityCards = activities.map(activity => {
+	const activityCards = allActivities.map(activity => {
 		return (
 			<ActivityCard
 				key={activity.id}

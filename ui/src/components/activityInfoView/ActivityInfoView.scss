@@ -1,23 +1,29 @@
 @use "src/index.scss" as *;
 
 .activity-info-view-container {
-	width: 80%;
+	background-color: $cherry;
+	height: 70vh;
+	width: 80vw;
 	border: 1px solid black;
 	border-radius: 5px;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-evenly;
 }
+
 .information {
-	width: 80%;
+	background-color: $lightLavendar;
+	width: 70vw;
 	border: 1px solid black;
 	border-radius: 5px;
 	padding: 20px;
 }
 
 .picture-buttons {
-	width: 80%;
+	background-color: $lightLavendar;
+	width: 70vw;
 	border: 1px solid black;
 	border-radius: 5px;
 	padding: 20px;
@@ -42,3 +48,4 @@
 	display: flex;
 	flex-direction: column;
 }
+

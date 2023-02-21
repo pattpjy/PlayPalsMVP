@@ -1,5 +1,5 @@
 import "./App.scss";
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Routes, Route } from "react-router-dom";
 import HeaderNav from "../headerNav/HeaderNav";
 import LandingPage from "../landingPage/LandingPage";
@@ -7,17 +7,20 @@ import AllActivities from "../allActivities/AllActivities";
 import ToDos from "../todo/ToDos";
 import ActivityInfoView from "../activityInfoView/ActivityInfoView";
 import ErrorPage from "../errorPage/ErrorPage";
+import activitiesData from "../../apiCalls/dummyData.js";
 
 function App() {
-
+	const [allActivities, setAllActivities] = useState(activitiesData.activities)
+	const [singleActivity, setSingleActivity] = useState(activitiesData.activities[0])
+	console.log(allActivities)
   return (
     <main className="main-app">
       <HeaderNav />
 			<Routes>
 				<Route path='/' element={<LandingPage />}/>
-				<Route path='/AllActivities' element={<AllActivities />}/>
+				<Route path='/AllActivities' element={<AllActivities allActivities={allActivities}/>}/>
 				<Route path='/ToDos' element={<ToDos />} />
-				<Route path='/ActivityInfoView' element={<ActivityInfoView />}/>
+				<Route path='/ActivityInfoView' element={<ActivityInfoView singleActivity={singleActivity}/>}/>
 				<Route path='*' element={<ErrorPage />}/>
 			</Routes>
       <section className="trying-out-colors">
