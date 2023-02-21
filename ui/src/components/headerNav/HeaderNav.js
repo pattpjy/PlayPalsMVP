@@ -1,17 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./HeaderNav.scss";
-import { BsBookmarkStarFill } from "react-icons/bs";
-import { CgProfile } from "react-icons/cg";
+import { BiGame } from "react-icons/bi";
+import { IoIosClipboard } from "react-icons/io"
 
 export default function HeaderNav() {
+    const navigate = useNavigate();
     return (
-        <header className="header">
-            <nav>
-                <BsBookmarkStarFill alt="bookmark icon" />
-                <h1>Title</h1> //make this a link to activity list
-                {/* // ^^ add <Link /> to always go back to all activities  */}
-                <CgProfile alt="profile icon" />
-            </nav>
+        <header className="header-container">
+                <nav className="header-nav">
+                    <button className="invis-button" onClick={() => navigate("/ToDos")}>
+                        <IoIosClipboard className="clipboard" alt="bookmark icon" />
+                    </button>
+                    <button className="invis-button" onClick={() => navigate("/AllActivities")}>
+                        <h1 className="main-title">Kid Tasks</h1>   
+                    </button >
+                    <button className="invis-button" onClick={() => navigate("/Profile")}>
+                        <BiGame className="dude" alt="little dude icon" />      
+                    </button>  
+                </nav>
         </header>
     );
 }

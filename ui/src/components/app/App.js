@@ -6,6 +6,7 @@ import LandingPage from "../landingPage/LandingPage";
 import AllActivities from "../allActivities/AllActivities";
 import ToDos from "../todo/ToDos";
 import ActivityInfoView from "../activityInfoView/ActivityInfoView";
+import Profile from "../profile/Profile"
 import ErrorPage from "../errorPage/ErrorPage";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 				<Route path='/AllActivities' element={<AllActivities />}/>
 				<Route path='/ToDos' element={<ToDos />} />
 				<Route path='/ActivityInfoView' element={<ActivityInfoView />}/>
+        <Route path='/Profile' element={<Profile />}/>
 				<Route path='*' element={<ErrorPage />}/>
 			</Routes>
       <section className="trying-out-colors">
