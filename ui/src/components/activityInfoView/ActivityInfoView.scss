@@ -1,1 +1,44 @@
 @use "src/index.scss" as *;
+
+.activity-info-view-container {
+	width: 80%;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.information {
+	width: 80%;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.picture-buttons {
+	width: 80%;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.name {
+	margin: 0px;
+}
+
+.heart-and-name {
+	width: 80%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+}
