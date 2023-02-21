@@ -15,7 +15,7 @@ export default function HeaderNav() {
                     <button className="invis-button" onClick={() => navigate("/AllActivities")}>
                         <h1 className="main-title">Kid Tasks</h1>   
                     </button >
-                    <button className="invis-button" onClick={() => navigate()}>
+                    <button className="invis-button" onClick={() => navigate("/Profile")}>
                         <BiGame className="dude" alt="little dude icon" />      
                     </button>  
                 </nav>
