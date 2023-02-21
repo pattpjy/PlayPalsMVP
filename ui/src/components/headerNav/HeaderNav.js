@@ -9,13 +9,13 @@ export default function HeaderNav() {
     return (
         <header className="header-container">
                 <nav className="header-nav">
-                    <button className="invis-button" onClick={}>
+                    <button className="invis-button" onClick={() => navigate("/ToDos")}>
                         <IoIosClipboard className="clipboard" alt="bookmark icon" />
                     </button>
-                    <button className="invis-button" onClick={}>
+                    <button className="invis-button" onClick={() => navigate("/AllActivities")}>
                         <h1 className="main-title">Kid Tasks</h1>   
                     </button >
-                    <button className="invis-button" onClick={}>
+                    <button className="invis-button" onClick={() => navigate()}>
                         <BiGame className="dude" alt="little dude icon" />      
                     </button>  
                 </nav>
