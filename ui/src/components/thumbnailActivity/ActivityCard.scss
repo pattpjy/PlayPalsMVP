@@ -1,7 +1,7 @@
 @use "src/index.scss" as *;
 
 .activity-card {
-	background-color: brown;
+	background-color: $cherry;
 	border-radius: 4px;
 	border: 1px solid black;
   padding: 5px;

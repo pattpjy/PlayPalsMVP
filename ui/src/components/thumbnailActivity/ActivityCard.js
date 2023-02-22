@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import './ActivityCard.scss'
 import { BsBookmark } from "react-icons/bs"
 

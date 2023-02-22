@@ -5,7 +5,7 @@ import ActivityCard from "../thumbnailActivity/ActivityCard";
 import activitiesData from "../../apiCalls/dummyData.js";
 
 
-export default function AllActivities() {
+export default function AllActivities({allActivities}) {
 	const [activities, setActivityData] = useState(activitiesData.activities);
 	console.log(activities);
 	const activityOptions = Object.keys(activities[0]);

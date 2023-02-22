@@ -1,5 +1,5 @@
 import "./App.scss";
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Routes, Route } from "react-router-dom";
 import HeaderNav from "../headerNav/HeaderNav";
 import LandingPage from "../landingPage/LandingPage";
@@ -8,9 +8,9 @@ import ToDos from "../todo/ToDos";
 import ActivityInfoView from "../activityInfoView/ActivityInfoView";
 import Profile from "../profile/Profile"
 import ErrorPage from "../errorPage/ErrorPage";
+import activitiesData from "../../apiCalls/dummyData.js";
 
 function App() {
-
   return (
     <main className="main-app">
       <HeaderNav />
