@@ -141,6 +141,5 @@ const activitiesData = [
       },
     ];
  
-  
-  export default activitiesData;
+module.exports = activitiesData;
   
