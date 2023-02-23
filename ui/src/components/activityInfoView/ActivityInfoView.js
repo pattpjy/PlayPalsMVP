@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./ActivityInfoView.scss";
 import { AiOutlineCheckCircle } from "react-icons/ai"
-import { AiFillCheckCircle } from "react-icons/ai"
+// import { AiFillCheckCircle } from "react-icons/ai"
 import { AiOutlineHeart } from "react-icons/ai"
-import { AiFillHeart } from "react-icons/ai"
+// import { AiFillHeart } from "react-icons/ai"
 import { BsBookmark } from "react-icons/bs"
-import { BsFillBookmarkFill } from "react-icons/bs"
+// import { BsFillBookmarkFill } from "react-icons/bs"
 
 export default function ActivityInfoView({singleActivity}) {
+	
 	return (
 		<section className='activity-info-view-container'>
 			<div className='heart-and-name'>

@@ -11,7 +11,7 @@ export default function Profile() {
             <p>Look at all the things we've done together!</p>
             <p>I'm a good parent and it doesn't matter what activities I did, just that I did activities with my kid!</p>
             <p>NEED LOGIC: to display stats, like, "seems like you guys like 'hiking' the most!"</p>
-            //wishlist: be able to print report card 
+            {/* wishlist: be able to print report card  */}
         </section>
     );
 }
