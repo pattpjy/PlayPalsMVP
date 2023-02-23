@@ -1,5 +1,5 @@
 import "./App.scss";
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HeaderNav from "../headerNav/HeaderNav";
 import LandingPage from "../landingPage/LandingPage";
@@ -8,7 +8,7 @@ import ToDos from "../todo/ToDos";
 import ActivityInfoView from "../activityInfoView/ActivityInfoView";
 import Profile from "../profile/Profile"
 import ErrorPage from "../errorPage/ErrorPage";
-import activitiesData from "../../apiCalls/dummyData.js";
+
 
 function App() {
   return (
@@ -16,9 +16,9 @@ function App() {
       <HeaderNav />
 			<Routes>
 				<Route path='/' element={<LandingPage />}/>
-				<Route path='/AllActivities' element={<AllActivities />}/>
-				<Route path='/ToDos' element={<ToDos />} />
-				<Route path='/ActivityInfoView' element={<ActivityInfoView />}/>
+				<Route path='/Activities' element={<AllActivities />}/>
+				<Route path='/Saved-Activities' element={<ToDos />} />
+				<Route path='/Activities/:id' element={<ActivityInfoView />}/>
         <Route path='/Profile' element={<Profile />}/>
 				<Route path='*' element={<ErrorPage />}/>
 			</Routes>

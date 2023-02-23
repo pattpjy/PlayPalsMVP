@@ -9,10 +9,10 @@ export default function HeaderNav() {
     return (
         <header className="header-container">
                 <nav className="header-nav">
-                    <button className="invis-button" onClick={() => navigate("/ToDos")}>
+                    <button className="invis-button" onClick={() => navigate("/Saved-Activities")}>
                         <IoIosClipboard className="clipboard" alt="bookmark icon" />
                     </button>
-                    <button className="invis-button" onClick={() => navigate("/AllActivities")}>
+                    <button className="invis-button" onClick={() => navigate("/")}>
                         <h1 className="main-title">Kid Tasks</h1>   
                     </button >
                     <button className="invis-button" onClick={() => navigate("/Profile")}>
