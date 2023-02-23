@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Select from "react-select";
 // import Filter from "../filter/Filter";
@@ -10,6 +10,9 @@ import "./AllActivities.scss";
 export default function AllActivities() {
   const [activities, setActivityData] = useState(activitiesData.activities);
   const [originalActivities] = useState(activitiesData.activities);
+  const [singleActivity, setSingleActivity] = useState({})
+  // const [singleActivityId, setSingleActivityId] = useState()
+  console.log('singleActivity', singleActivity)
 
   const activityOptions = [
     { value: "indoor", label: "indoor" },
@@ -30,8 +33,38 @@ export default function AllActivities() {
     setActivityData(filterActivities);
   };
 
+
+
+  const handleClick = (id) => {
+    // console.log('id', id)
+    const findSingleActivity =  activities.find(activity => activity.id === id)
+    console.log("find", findSingleActivity)
+    // if(findSingleActivity) {
+      // setSingleActivity(findSingleActivity)
+
+      // console.log("setsingle", singleActivity)
+      return findSingleActivity
+    }
+  
+
+  // useEffect(() => {
+
+  //   const findSingleActivity =  activities.find(activity => activity.id === singleActivityId)
+  //   setSingleActivity(findSingleActivity)
+    
+  // }, [singleActivityId])
+ 
+
+  
+  
   const activityCards = activities.map((activity) => {
     return (
+      <Link 
+      to={`/Activities/${activity.id}`} 
+      state={{singleActivity: singleActivity}} 
+      onClick={() => setSingleActivity(handleClick(activity.id))} 
+      key={activity.name} 
+      style={{ textDecoration: 'none' }}>
         <ActivityCard
           key={activity.id}
           id={activity.id}
@@ -45,6 +78,7 @@ export default function AllActivities() {
           outdoor={activity.outdoor}
           motorSkill={activity.motorSkill}
         />
+      </Link>
     );
   });
 

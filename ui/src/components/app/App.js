@@ -8,9 +8,10 @@ import ToDos from "../todo/ToDos";
 import ActivityInfoView from "../activityInfoView/ActivityInfoView";
 import Profile from "../profile/Profile"
 import ErrorPage from "../errorPage/ErrorPage";
-
+// import activitiesData from "../../apiCalls/dummyData.js";
 
 function App() {
+  
   return (
     <main className="main-app">
       <HeaderNav />
