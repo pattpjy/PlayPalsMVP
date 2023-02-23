@@ -21,20 +21,15 @@ export default function AllActivities({ allActivities }) {
   //create animated wrappers around components passed in as arguments
 
   const showFilterActivities = (arrayOfInput) => {
-    // const filterActivitiesnop = activities.filter(
-    //   (activity) => activity[e] === true || activity[a] === true
-    // );
+    
     if (arrayOfInput.length === 0) {
       setActivityData(originalActivities);
       return;
     }
     const filterActivities = originalActivities.filter((act) => {
-      // let isMatched;
+      /
       return arrayOfInput.every((input) => act[input.value] === true);
-      // arrayOfInput.forEach((input) => {
-      //   isMatched = isMatched && act[input.value] === true;
-      // });
-      // return isMatched;
+      
     });
 
     setActivityData(filterActivities);
@@ -61,7 +56,7 @@ export default function AllActivities({ allActivities }) {
   return (
     <section className="all-activities-section">
       <p>this is all activities</p>
-      {/* <Filter isMulti placeHolder="Select..." options={activityOptions} /> */}
+     
 
       <Select
         closeMenuOnSelect={false}
