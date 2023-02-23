@@ -27,6 +27,7 @@ describe('Landing Page', () => {
   it("Should have a button to take user to the activities display", () => {
     cy.get("button.find").contains("Find a New Activity").click()
     cy.url().should("include", "/Activities")
+
   })
   
   it("Should have a button to take user to the activities display", () => {
