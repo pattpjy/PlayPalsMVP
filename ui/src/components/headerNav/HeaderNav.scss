@@ -6,24 +6,19 @@
     color: $purpleberry;
     display: flex;
     flex-direction: row;
-    height: 10vh;
     justify-content: center;
     width: 100%;
 }
+
 .header-nav{
     align-items: center;
+    border-bottom: 2px solid $cherry;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
 }
 
-.main-title{
-    color: $cherry;
-    font-size: xxx-large;
-    margin: 0;
-    padding-top: .1em;
-}
 
 .clipboard,
 .dude {
@@ -35,4 +30,27 @@
     background-color: rgb(0,0,0,0);
     border: none;
     color: $purpleberry;
+}
+
+.main-title{
+    color: $cherry;
+    font-size: 3em;
+    margin: 0;
+}
+
+@media (min-width: 40em) {
+    .header-container{
+        border-bottom: 2px solid $cherry;
+        height: 10lvh;
+    }
+    .header-nav{
+        display: flex;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+    .clipboard,
+    .dude{
+        height: 4em;
+        width: 4em;
+    }
 }

@@ -3,12 +3,29 @@
 .landing {
     align-items: center;
     background-color: $lightPinkPurple;
+    border-left: 2px solid $cherry;
+    border-right: 2px solid $cherry;
     color: $purpleberry;
     display: flex;
     flex-direction: column;
-    height: 80%;
+    height: 100%;
     justify-content: space-evenly;
-    width: 80%;
+    width: 81%;
+}
+.hello-p,
+.button-box{
+    background-color: $lightPinkPurple;
+    font-size: 1.2em;
+}
+
+.call-to-action{
+    font-weight: 500;
+}
+
+.button-box{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
 
 .find,
@@ -17,6 +34,28 @@
     border-radius: .2em;
     border: .1em solid $candy;
     color: $intensePink;
+    font-weight: 600;
     height: 3em;
     width: 15em;
+}
+
+@media (min-width: 40em) {
+    .landing{
+        border-left: 3px solid $cherry;
+        border-right: 3px solid $cherry;
+    }
+    .find,
+    .go{
+        font-size: 1em;
+    }
+}
+@media (min-width: 40em) {
+    .call-to-action{
+        background-color: $lightPinkPurple;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        font-size: 2em;
+        font-weight: 500;
+    }
 }
