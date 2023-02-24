@@ -2,8 +2,25 @@
 
 .report {
     background-color: $lightBlue;
+    border-bottom: .2em solid $cherry;
+    border-left: .3em solid $ocean;
+    border-right: .3em solid $ocean;
+    color: $purpleberry;
     display: flex;
     flex-direction: column;
     height: 80%;
+    justify-content: space-evenly;
     width: 80%;
+}
+
+.report-h2{
+    background-color: $lightBlue;
+    font-size: 2em;
+}
+.list-icon{
+    background-color: $lightBlue;
+}
+.report-p{
+    background-color: $lightBlue;
+    font-size: 1em;
 }

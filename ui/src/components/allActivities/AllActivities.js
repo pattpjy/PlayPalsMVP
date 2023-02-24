@@ -50,7 +50,6 @@ export default function AllActivities() {
 
   return (
     <section className="all-activities-section">
-      <p>this is all activities</p>
       <Select
         closeMenuOnSelect={false}
         components={animatedComponents}

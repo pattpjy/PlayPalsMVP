@@ -14,11 +14,11 @@ export default function ActivityCard({ id, name, startAge, endAge, image }) {
 			<Link to={`/Activities/${id}`} style={{ textDecoration: 'none' }}>
 				<div className='title'>
 					<p className='activity-name'>{name}</p>
-					<p>{startAge} months-{endAge} months</p>
+					<p className="activity-age">{startAge} months-{endAge} months</p>
 				</div>
-				<img src={image} alt={name} width={300} />
+				<img className="activity-image" src={image} alt={name} width={300} />
 			</Link>
-			<BsBookmark type='button' alt='blankBookmark' />
+			<BsBookmark className="activity-bookmark" type='button' alt='blankBookmark' />
 		</section>
 	)
 }

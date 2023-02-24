@@ -7,9 +7,14 @@ export default function LandingPage() {
 
     return (
         <section className="landing">
-            <p className="hello-message">Hi Patt! Let's play with Maddie!</p>
-            <button className="find" onClick={() => navigate("/Activities")} >Find a New Activity</button>
-            <button className="go" onClick={() => navigate("/Saved-Activities")} >Go to Saved Activities</button>
+            <section className="call-to-action">
+                <p className="hello-p">Hi Patt!</p>
+                <p className="hello-p">Let's play with Maddie!</p>
+            </section>
+            <div className="button-box">
+                <button className="find" onClick={() => navigate("/Activities")} >Find a New Activity</button>
+                <button className="go" onClick={() => navigate("/Saved-Activities")} >Go to Saved Activities</button>
+            </div>
         </section>
     );
 }

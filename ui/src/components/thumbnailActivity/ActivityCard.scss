@@ -1,11 +1,11 @@
 @use "src/index.scss" as *;
 
 .activity-card {
-	background-color: $cherry;
-	border-radius: 4px;
-	border: 1px solid black;
-  padding: 5px;
-  width: 80%
+	background-color: $lightLavendar;
+	border-radius: .2em;
+	border: .1em solid $ocean;
+  padding: .2em;
+  width: 90%;
 }
 
 img {
@@ -14,7 +14,21 @@ img {
 }
 
 .activity-name {
-	color: black;
-  text-decoration: none;
+  background-color: $lightLavendar;
+	color: $purpleberry;
+  font-weight: 500;
   margin: 0;
+  text-decoration: none;
 }
+
+.activity-name,
+.activity-age,
+.activity-image,
+.activity-bookmark{
+  background-color: $lightLavendar;
+}
+
+.activity-image{
+  font-size: .8em;
+}
+

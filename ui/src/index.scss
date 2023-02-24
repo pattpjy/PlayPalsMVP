@@ -11,6 +11,7 @@ $teal: rgb(73, 243, 221);
 $lightBlue: rgb(166, 215, 251);
 $pink: rgb(253, 158, 148);
 
+*,
 body {
   background-color: $lightLavendar;
   margin: 0;
@@ -19,3 +20,14 @@ body {
     sans-serif;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@media (min-width: 40em) {
+  .generic-flexbox-container {
+    display: flex;
+    gap: 2em;
+  }
+}

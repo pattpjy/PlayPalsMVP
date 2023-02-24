@@ -17,7 +17,6 @@ describe('Landing Page', () => {
   it('Should show an icon in the upper right side of the page in the nav/header', () => {
     cy.get("svg.dude").click()
     cy.url().should("include", "/Profile")
-
   });
   
   it("Should have a welcome message", () => {
