@@ -44,6 +44,7 @@ export default function AllActivities() {
           indoor={activity.indoor}
           outdoor={activity.outdoor}
           motorSkill={activity.motorSkill}
+          activities={activities}
         />
     );
   });
