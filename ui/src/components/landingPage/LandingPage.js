@@ -7,7 +7,7 @@ export default function LandingPage() {
 
     return (
         <section className="landing">
-            <p>Hi Patt! Let's play with Maddie!</p>
+            <p className="hello-message">Hi Patt! Let's play with Maddie!</p>
             <button className="find" onClick={() => navigate("/Activities")} >Find a New Activity</button>
             <button className="go" onClick={() => navigate("/Saved-Activities")} >Go to Saved Activities</button>
         </section>
