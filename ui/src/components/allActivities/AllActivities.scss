@@ -17,3 +17,11 @@
 	flex-direction: column;
 	gap: .2em;
 }
+
+@media (min-width: 40em) {
+	.activity-container {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr 1fr 1fr;
+	  gap: 2em;
+	}
+  }
