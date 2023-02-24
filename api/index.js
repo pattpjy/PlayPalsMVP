@@ -1,7 +1,12 @@
 const express = require("express");
 const app = express();
-const port = 3001;
 const activitiesData = require("./data.js");
+const cors = require("cors");
+require("dotenv").config();
+
+app.set("port", process.env.PORT);
+
+app.use(cors());
 
 app.use(express.json());
 
@@ -25,6 +30,6 @@ app.get("/api/v1/activities/:id", (req, res) => {
     res.status(200).json(activity);
 });
   
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+app.listen(process.env.PORT, () => {
+    console.log(`Example app listening on port ${process.env.PORT}`);
 });
