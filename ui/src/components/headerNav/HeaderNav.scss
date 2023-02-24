@@ -40,7 +40,7 @@
 
 @media (min-width: 40em) {
     .header-container{
-        border-bottom: 2px solid $cherry;
+        border-bottom: .2em solid $cherry;
         height: 10lvh;
     }
     .header-nav{
@@ -52,5 +52,8 @@
     .dude{
         height: 4em;
         width: 4em;
+    }
+    .main-title{
+        font-size: 4em;
     }
 }
