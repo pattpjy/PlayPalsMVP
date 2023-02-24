@@ -10,8 +10,8 @@
 .activity-container {
 	align-items: center;
 	background-color: $lightBlue;
-	border: 1px solid black;
-  	border-radius: 5px;
+	border: $oceanBorder;
+  	border-radius: $fifthBorderRadius;
   	padding: 20px;
   	display: flex;
 	flex-direction: column;

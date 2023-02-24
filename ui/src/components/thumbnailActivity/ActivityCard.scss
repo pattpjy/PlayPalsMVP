@@ -2,8 +2,8 @@
 
 .activity-card {
 	background-color: $lightLavendar;
-	border-radius: .2em;
-	border: .1em solid $ocean;
+	border-radius: $fifthBorderRadius;
+	border: $oceanBorder;
   padding: .2em;
   width: 90%;
 }
