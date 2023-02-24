@@ -1,7 +1,7 @@
 const activitiesData = [
       {
         id: 1,
-        path: "",
+        img_url: "",
         startAge: 24,
         endAge: 48,
         name: "paper cutting",
@@ -14,6 +14,7 @@ const activitiesData = [
       },
       {
         id: 2,
+        img_url: "",
         startAge: 8,
         endAge: 10,
         name: "Sensory bags and bins",
@@ -26,6 +27,7 @@ const activitiesData = [
       },
       {
         id: 3,
+        img_url: "",
         startAge: 10,
         endAge: 48,
         name: "obstacle course",
@@ -43,6 +45,7 @@ const activitiesData = [
       },
       {
         id: 4,
+        img_url: "",
         startAge: 9,
         endAge: 12,
         name: "pompom whisk",
