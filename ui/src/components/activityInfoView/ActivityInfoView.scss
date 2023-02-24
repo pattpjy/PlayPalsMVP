@@ -1,11 +1,12 @@
 @use "src/index.scss" as *;
 
 .activity-info-view-container {
-	background-color: $cherry;
+	background-color: $lightBlue;
+	color: $purpleberry;
 	height: 70vh;
 	width: 80vw;
-	border: 1px solid black;
-	border-radius: 5px;
+	border: $oceanBorder;
+	border-radius: $fifthBorderRadius;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
@@ -15,22 +16,22 @@
 
 .information {
 	background-color: $lightLavendar;
-	width: 70vw;
-	border: 1px solid black;
-	border-radius: 5px;
+	border: $oceanBorder;
+	border-radius: $fifthBorderRadius;
 	padding: 20px;
+	width: 70vw;
 }
 
 .picture-buttons {
+	align-items: center;
 	background-color: $lightLavendar;
-	width: 70vw;
-	border: 1px solid black;
-	border-radius: 5px;
-	padding: 20px;
+	border: $oceanBorder;
+	border-radius: $fifthBorderRadius;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
 	justify-content: space-around;
+	padding: 20px;
+	width: 70vw;
 }
 
 .name {

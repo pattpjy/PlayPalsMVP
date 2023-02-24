@@ -11,6 +11,8 @@ $teal: rgb(73, 243, 221);
 $lightBlue: rgb(166, 215, 251);
 $pink: rgb(253, 158, 148);
 
+$oceanBorder: .1em solid $ocean;
+$fifthBorderRadius: .2em;
 *,
 body {
   background-color: $lightLavendar;
@@ -26,8 +28,14 @@ img {
 }
 
 @media (min-width: 40em) {
+  body {
+    width: 100lvw;
+  }
+}
+@media (min-width: 40em) {
   .generic-flexbox-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2em;
   }
 }
