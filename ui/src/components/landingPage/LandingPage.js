@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.scss";
+import "../../assets/bubbles.jpeg";
 
 export default function LandingPage() {
     let navigate = useNavigate()

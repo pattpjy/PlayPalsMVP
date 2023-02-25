@@ -1,14 +1,13 @@
 @use "src/index.scss" as *;
 
 .drop-down {
-  background-color: slategray;
-}
+  background-color: $ocean;
 
 .dropdown-container {
   text-align: left;
-  border: 1px solid #ccc;
+  border: .1em solid $teal;
   position: relative;
-  border-radius: 5px;
+  border-radius: $fifthBorderRadius;
 }
 
 .dropdown-input {
@@ -23,8 +22,8 @@
   position: absolute;
   transform: translateY(4px);
   width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: .1em solid $teal;
+  border-radius: $fifthBorderRadius;
   overflow: auto;
   max-height: 150px;
   background-color: #fff;
@@ -51,7 +50,7 @@
 .dropdown-tag-item {
   background-color: #ddd;
   padding: 2px 4px;
-  border-radius: 2px;
+  border-radius: $fifthBorderRadius;
   display: flex;
   align-items: center;
 }
