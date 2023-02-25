@@ -1,5 +1,5 @@
 require('dotenv').config({path: '../.env'})
-console.log(process.env.DB_URL)
+// console.log(process.env.DB_URL)
 module.exports = {
   development: {
     client: 'pg',
