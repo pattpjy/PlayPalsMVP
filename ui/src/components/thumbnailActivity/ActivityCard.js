@@ -1,13 +1,18 @@
-import React from "react";
+import React, {useState}from "react";
 import { Link } from "react-router-dom";
 import './ActivityCard.scss'
-import { BsBookmark } from "react-icons/bs"
-// import { BsFillBookmarkFill } from "react-icons/bs"
+import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs"
 
 export default function ActivityCard({ id, name, startAge, endAge, image }) {
 	// logic for deciding if needs to be converted into years or to keep in months
 	// const startAgeInYears = startAge/12
 	// const endAgeInYears = endAge/12
+	const [toggle, setToggle] = useState(false)
+
+	const handleToggle = () => {
+		setToggle(!toggle)
+	}
+	
 
 	return (
 		<section id={id} className='activity-card'>
@@ -18,7 +23,8 @@ export default function ActivityCard({ id, name, startAge, endAge, image }) {
 				</div>
 				<img className="activity-image" src={image} alt={name} width={300} />
 			</Link>
-			<BsBookmark className="activity-bookmark" type='button' alt='blankBookmark' />
+			{!toggle && <BsBookmark onClick={handleToggle} type='button' alt='blankBookmark'/>}
+			{toggle && <BsFillBookmarkFill onClick={handleToggle} type='button' alt='blankBookmark'/>}
 		</section>
 	)
 }
