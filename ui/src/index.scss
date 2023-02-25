@@ -27,14 +27,8 @@ img {
 }
 
 @media (min-width: 40em) {
-  body {
-    width: 100lvw;
-  }
-}
-@media (min-width: 40em) {
   .generic-flexbox-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
     gap: 2em;
   }
 }

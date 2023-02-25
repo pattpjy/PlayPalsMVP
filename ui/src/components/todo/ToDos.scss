@@ -8,10 +8,10 @@
 }
 
 .to-do-container {
-	border: $oceanBorder;
-  	border-radius: $fifthBorderRadius;
-  	padding: 20px;
-  	display: flex;
+	border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
 	flex-direction: column;
 	align-items: center;
 }
