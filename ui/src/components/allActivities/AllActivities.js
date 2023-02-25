@@ -1,7 +1,5 @@
-import React, { useState, useEffect} from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import Select from "react-select";
-// import Filter from "../filter/Filter";
 import makeAnimated from "react-select/animated";
 import ActivityCard from "../thumbnailActivity/ActivityCard";
 import activitiesData from "../../apiCalls/dummyData.js";
@@ -35,15 +33,16 @@ export default function AllActivities() {
         <ActivityCard
           key={activity.id}
           id={activity.id}
-          image={activity.path}
-          startAge={activity.startAge}
-          endAge={activity.endAge}
+          image={activity.img_url}
+          startAge={activity.start_age}
+          endAge={activity.end_age}
           name={activity.name}
           materials={activity.materials}
           instructions={activity.instructions}
           indoor={activity.indoor}
           outdoor={activity.outdoor}
-          motorSkill={activity.motorSkill}
+          motorSkill={activity.motor_skills}
+          activities={activities}
         />
     );
   });
