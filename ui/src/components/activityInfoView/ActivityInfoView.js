@@ -1,13 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./ActivityInfoView.scss";
-import { AiOutlineCheckCircle } from "react-icons/ai"
-// import { AiFillCheckCircle } from "react-icons/ai"
-import { AiOutlineHeart } from "react-icons/ai"
-// import { AiFillHeart } from "react-icons/ai"
-import { BsBookmark } from "react-icons/bs"
-// import { BsFillBookmarkFill } from "react-icons/bs"
+import { AiFillAccountBook, AiFillCheckCircle, AiOutlineHeart, AiFillHeart, AiOutlineCheckCircle } from "react-icons/ai"
+import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs"
 
-export default function ActivityInfoView({singleActivity}) {
+export default function ActivityInfoView({ singleActivity }) {
 	const [toggle, setToggle] = useState(false)
 
 	const handleToggle = () => {
@@ -17,14 +13,17 @@ export default function ActivityInfoView({singleActivity}) {
 	return (
 		<section className='activity-info-view-container'>
 			<div className='heart-and-name'>
-				<AiOutlineHeart type='button' alt='blankHeart' />
+				{!toggle && <AiOutlineHeart onClick={handleToggle} type='button' alt='blankHeart' />}
+				{toggle && <AiFillHeart onClick={handleToggle} type='button' alt='filledHeart' />}
 				<h3 className='name'>{singleActivity.name}</h3>
 			</div>
 			<div className='picture-buttons'>
 				<img src={singleActivity.image} alt={singleActivity.name} />
 				<div className='buttons'>
-					<AiOutlineCheckCircle type='button' alt='blankCheckmark' />
-					<BsBookmark type='button' alt='blankBookmark' />
+					{!toggle && <AiOutlineCheckCircle onClick={handleToggle} type='button' alt='blankCheckmark' />}
+					{toggle && <AiFillCheckCircle onClick={handleToggle} type='button' alt='blankCheckmark' />}
+					{!toggle && <BsBookmark onClick={handleToggle} type='button' alt='blankBookmark' />}
+					{toggle && <BsFillBookmarkFill onClick={handleToggle} type='button' alt='blankBookmark' />}
 				</div>
 			</div>
 			<div className='information'>
