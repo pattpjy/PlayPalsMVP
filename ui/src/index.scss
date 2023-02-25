@@ -13,13 +13,12 @@ $pink: rgb(253, 158, 148);
 
 $oceanBorder: .1em solid $ocean;
 $fifthBorderRadius: .2em;
+
 *,
 body {
   background-color: $lightLavendar;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 img {

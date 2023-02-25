@@ -13,7 +13,7 @@ export default function HeaderNav() {
                         <IoIosClipboard className="clipboard" alt="bookmark icon" />
                     </button>
                     <button className="invis-button" onClick={() => navigate("/")}>
-                        <h1 className="main-title">Kid Tasks</h1>   
+                        <h1 className="main-title">PlayPals</h1>   
                     </button >
                     <button className="invis-button" onClick={() => navigate("/Profile")}>
                         <BiGame className="dude" alt="little dude icon" />      
