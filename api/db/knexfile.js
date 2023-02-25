@@ -16,14 +16,17 @@ module.exports = {
   },
   production: {
     client: "pg",
-    connection: process.env.DATABASE_URL + "?ssl=true",
-    // connection: {
-    //   host: process.env.DB_URL_PROD,
-    //   user: process.env.DB_USER_PROD,
-    //   password: process.env.DB_PASSWORD_PROD,
-    //   database: process.env.DB_DATABASE_PROD,
-    //   ssl: { rejectUnauthorized: false },
-    // },
+    connection: {
+      connectionString: process.env.DATABASE_URL,
+      ssl: { rejectUnauthorized: false },
+
+      // connection: {
+      //   host: process.env.DB_URL_PROD,
+      //   user: process.env.DB_USER_PROD,
+      //   password: process.env.DB_PASSWORD_PROD,
+      //   database: process.env.DB_DATABASE_PROD,
+      //   ssl: { rejectUnauthorized: false },
+    },
     migrations: {
       directory: "./migrations",
     },
