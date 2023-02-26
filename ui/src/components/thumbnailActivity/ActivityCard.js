@@ -4,9 +4,7 @@ import './ActivityCard.scss'
 import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs"
 
 export default function ActivityCard({ id, name, startAge, endAge, image, activities }) {
-	// logic for deciding if needs to be converted into years or to keep in months
-	// const startAgeInYears = startAge/12
-	// const endAgeInYears = endAge/12
+
 	const [toggle, setToggle] = useState(false)
 
 	const handleToggle = () => {

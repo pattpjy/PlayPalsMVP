@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ActivityInfoView.scss";
+import "./OneActivityView.scss";
 import { AiFillCheckCircle, AiOutlineHeart, AiFillHeart, AiOutlineCheckCircle } from "react-icons/ai"
 import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs"
 import { useLocation } from "react-router-dom";
@@ -8,10 +8,10 @@ export default function ActivityInfoView() {
 	const location = useLocation()
 	const currentId = location.state.id
 	const allActivities = location.state.activities
-	console.log('location', allActivities)
-	console.log('currentid', currentId)
+	// console.log('location', allActivities)
+	// console.log('currentid', currentId)
 	const currentActivity = allActivities.find(activity => activity.id === currentId)
-	console.log('currentActivity', currentActivity)
+	// console.log('currentActivity', currentActivity)
 	const [toggle, setToggle] = useState(false)
 
 	const handleToggle = () => {

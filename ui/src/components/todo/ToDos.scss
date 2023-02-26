@@ -3,15 +3,14 @@
 .to-do-section {
 	display: flex;
 	flex-direction: column;
-	// height: 80%;
 	width: 100%;
 }
 
 .to-do-container {
-	border: 1px solid black;
-  border-radius: 5px;
-  padding: 20px;
-  display: flex;
-	flex-direction: column;
 	align-items: center;
+	border: $oceanBorder;
+  	border-radius: $fifthBorderRadius;
+  	display: flex;
+	flex-direction: column;
+	gap: 1em;
 }
