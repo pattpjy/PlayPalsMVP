@@ -15,9 +15,7 @@ function App() {
 	const [activities, setActivityData] = useState(activitiesData.activities);
 	console.log("App activities", activities)
 	//allActivityData, function
-	function getAllActivities() {
-		setActivityData(activities => activities = activitiesData.activities);
-	}
+
 	//Pass down these functions and have toggle add/spread in selections. State of filtered/favorites/to-do will be here.
 	//filtered favorites, favorites function ...favorites (heart)
 	const [favorites, setFavorites] = useState([]);

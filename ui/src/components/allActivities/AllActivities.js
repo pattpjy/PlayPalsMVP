@@ -1,14 +1,13 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import "./AllActivities.scss";
 import ActivityCard from "../thumbnailActivity/ThumbnailActivityCard";
 
 export default function AllActivities({activities}) {
-  const [selectedActivities, setSelectedActivities] = useState(activities)
+  const [selectedActivities, setSelectedActivities] = useState(activities);
+
   const animatedComponents = makeAnimated();
-  //create animated wrappers around components passed in as arguments
-  //keep here in AllActivities.js for filter dropdown mechanics
 
   const activityOptions = [
     { value: "indoor", label: "indoor" },
@@ -17,7 +16,6 @@ export default function AllActivities({activities}) {
 
   const showFilteredActivities = (arrayOfInput) => {
     if (arrayOfInput.length === 0) {
-      console.log(selectedActivities)
       setSelectedActivities(activities);
       return;
     }
@@ -27,14 +25,9 @@ export default function AllActivities({activities}) {
     });
 
     setSelectedActivities(filteredActivities);
-    // return selectedActivities;
-    //^^this is the filter state
   };
 
-//activities here needs to be true to state here, not original full list because of the filter
-
   const activityCards = selectedActivities.map((activity) => {
-    //  ^^current JSX   ^^selectedActivities array
     return (
         <ActivityCard
           key={activity.id}
