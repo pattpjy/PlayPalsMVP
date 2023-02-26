@@ -9,7 +9,7 @@
   gap: .1em;
   grid-template-columns: 1fr, 1fr, 1fr;
   margin: 0;
-  padding: .1em;
+  padding: 1em;
   width: 95%;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .activity-image{
-  border: .1em solid $pink;
+  border: .2em solid $pink;
   border-radius: $fifthBorderRadius;
   font-size: .8em;
   width: 100%;

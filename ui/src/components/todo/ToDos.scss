@@ -1,16 +1,12 @@
 @use "src/index.scss" as *;
 
-.to-do-section {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-}
-
 .to-do-container {
 	align-items: center;
 	border: $oceanBorder;
-  	border-radius: $fifthBorderRadius;
-  	display: flex;
+	border-radius: $fifthBorderRadius;
+	color: $purpleBerry;
+	display: flex;
 	flex-direction: column;
 	gap: 1em;
+	width: 100%;
 }
