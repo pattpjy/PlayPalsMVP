@@ -2,7 +2,9 @@ import React from "react";
 import "./Profile.scss";
 import { RiFileList2Line } from "react-icons/ri";
 
-export default function Profile() {
+export default function Profile({finishedActivities}) {
+    console.log("Finished Activities: ", finishedActivities)
+    //function to give feedback
     return (
         <section className="report">
             <h2 className="report-h2"><RiFileList2Line className="list-icon" alt="list icon"/>&nbsp;Kiddo Report Card</h2>

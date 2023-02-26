@@ -16,18 +16,26 @@ function App() {
 	//I've passed down 'setActivityData' function to AllActivities.js, but not sure how this is working?
 	console.log("App activities", activities)
 	//allActivityData, function
-	//favorites, favorites function ...favorites
-	//to-do
+
+	//Pass down these functions and have toggle add/spread in selections. State of filtered/favorites/to-do will be here.
+	//filtered favorites, favorites function ...favorites (heart)
+	const [favorites, setFavorites] = useState([]);
+
+	//filtered to-do (bookmark)
+	const [savedActivities, setSavedActivities] = useState([]);
+
+	//filtered finished, for profile/resume calculations (and possible third emoji on AllActivities list?)
+	const [finishedActivities, setFinishedActivities] = useState([]);
   return (
     <main className="main-app">
       <HeaderNav />
 			<Routes>
-				<Route path='/' element={<LandingPage />}/>
-				<Route path='/Activities' element={<AllActivities activities={activities}/>}/>
-				<Route path='/Saved-Activities' element={<ToDos />} />
-				<Route path='/Activities/:id' element={<OneActivityView />}/>
-        		<Route path='/Profile' element={<Profile />}/>
-				<Route path='*' element={<ErrorPage />}/>
+				<Route path='/' element={<LandingPage />} />
+				<Route path='/Activities' element={<AllActivities activities={activities} />} />
+				<Route path='/Saved-Activities' element={<ToDos savedActivities={savedActivities} />} />
+				<Route path='/Activities/:id' element={<OneActivityView />} />
+        		<Route path='/Profile' element={<Profile finishedActivities={finishedActivities} />} />
+				<Route path='*' element={<ErrorPage />} />
 			</Routes>
     </main>
   );
