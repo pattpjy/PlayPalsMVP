@@ -6,17 +6,22 @@ import activitiesData from "../../apiCalls/dummyData.js";
 import "./AllActivities.scss";
 
 export default function AllActivities() {
+  const animatedComponents = makeAnimated();
+  //create animated wrappers around components passed in as arguments
+  //keep here in AllActivities.js for filter dropdown mechanics
+
+  //move state up. App.js should be able to pass a "pure" activities list for 'originalActivities'
   const [activities, setActivityData] = useState(activitiesData.activities);
   const [originalActivities] = useState(activitiesData.activities);
-
+  
+  //filter variables, const needed here for filter mechanism, also pass down filter function kept in App.js?
+  //keep this here for the return below
   const activityOptions = [
     { value: "indoor", label: "indoor" },
     { value: "outdoor", label: "outdoor" },
   ];
 
-  const animatedComponents = makeAnimated();
-  //create animated wrappers around components passed in as arguments
-
+  //?
   const showFilterActivities = (arrayOfInput) => {
     if (arrayOfInput.length === 0) {
       setActivityData(originalActivities);
@@ -27,6 +32,8 @@ export default function AllActivities() {
     });
     setActivityData(filterActivities);
   };
+
+
 
   const activityCards = activities.map((activity) => {
     return (
