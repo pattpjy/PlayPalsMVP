@@ -13,27 +13,36 @@ export default function ActivityInfoView() {
 	// console.log('currentid', currentId)
 	const currentActivity = allActivities.find(activity => activity.id === currentId)
 	// console.log('currentActivity', currentActivity)
-	const [toggle, setToggle] = useState(false)
+	const [heartToggle, setHeartToggle] = useState(false)
+	const [bookmarkToggle, setBookmarkToggle] = useState(false)
+	const [checkmarkToggle, setCheckmarkToggle] = useState(false)
 
-	const handleToggle = () => {
-		setToggle(!toggle)
+	const handleHeartToggle = () => {
+		setHeartToggle(!heartToggle)
+	}
+	const handleBookmarkToggle = () => {
+		setBookmarkToggle(!bookmarkToggle)
+	}
+
+	const handleCheckmarkToggle = () => {
+		setCheckmarkToggle(!checkmarkToggle)
 	}
 
 
 	return (
 		<section className='activity-info-view-container'>
 			<div className='heart-and-name'>
-				{!toggle && <AiOutlineHeart onClick={handleToggle} type='button' alt='blankHeart' />}
-				{toggle && <AiFillHeart onClick={handleToggle} type='button' alt='filledHeart' />}
+				{!heartToggle && <AiOutlineHeart onClick={handleHeartToggle} type='button' alt='blankHeart' />}
+				{heartToggle && <AiFillHeart onClick={handleHeartToggle} type='button' alt='filledHeart' />}
 				<h3 className='name'>{currentActivity.name}</h3>
 			</div>
 			<div className='picture-buttons'>
 				<img src={currentActivity.img_url} alt={currentActivity.name} />
 				<div className='buttons'>
-					{!toggle && <AiOutlineCheckCircle onClick={handleToggle} type='button' alt='blankCheckmark' />}
-					{toggle && <AiFillCheckCircle onClick={handleToggle} type='button' alt='blankCheckmark' />}
-					{!toggle && <BsBookmark onClick={handleToggle} type='button' alt='blankBookmark' />}
-					{toggle && <BsFillBookmarkFill onClick={handleToggle} type='button' alt='blankBookmark' />}
+					{!checkmarkToggle && <AiOutlineCheckCircle onClick={handleCheckmarkToggle} type='button' alt='blankCheckmark' />}
+					{checkmarkToggle && <AiFillCheckCircle onClick={handleCheckmarkToggle} type='button' alt='blankCheckmark' />}
+					{!bookmarkToggle && <BsBookmark onClick={handleBookmarkToggle} type='button' alt='blankBookmark' />}
+					{bookmarkToggle && <BsFillBookmarkFill onClick={handleBookmarkToggle} type='button' alt='blankBookmark' />}
 				</div>
 			</div>
 			<div className='information'>

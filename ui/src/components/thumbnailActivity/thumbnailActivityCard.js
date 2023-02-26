@@ -1,15 +1,19 @@
 import React, {useState}from "react";
 import { Link } from "react-router-dom";
-import "./ThumbnailActivityCard.scss";
+import "./thumbnailActivityCard.scss";
 import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs";
 import { MdFavoriteBorder, MdFavorite} from "react-icons/md";
 
 export default function ActivityCard({ id, name, startAge, endAge, image, activities }) {
 
-	const [toggle, setToggle] = useState(false)
+	const [heartToggle, setHeartToggle] = useState(false)
+	const [bookmarkToggle, setBookmarkToggle] = useState(false)
 
-	const handleToggle = () => {
-		setToggle(!toggle)
+	const handleHeartToggle = () => {
+		setHeartToggle(!heartToggle)
+	}
+	const handleBookmarkToggle = () => {
+		setBookmarkToggle(!bookmarkToggle)
 	}
 
 	return (
@@ -23,11 +27,11 @@ export default function ActivityCard({ id, name, startAge, endAge, image, activi
 						<img className="activity-image" src={image} alt={name} width={300} />
 					</Link>
 					<div className="tv-dials">
-						{!toggle && <MdFavoriteBorder className="heartmark" onClick={handleToggle} type='button' alt='heart icon'/>}
-						{toggle && <MdFavorite className="heartmark" onClick={handleToggle} type='button' alt='heart icon filled'/>}
+						{!heartToggle && <MdFavoriteBorder className="heartmark" onClick={handleHeartToggle} type='button' alt='heart icon'/>}
+						{heartToggle && <MdFavorite className="heartmark" onClick={handleHeartToggle} type='button' alt='heart icon filled'/>}
 
-						{!toggle && <BsBookmark className="bookmark" onClick={handleToggle} type='button' alt='empty bookmark'/>}
-						{toggle && <BsFillBookmarkFill className="bookmark" onClick={handleToggle} type='button' alt='filled bookmark'/>}
+						{!bookmarkToggle && <BsBookmark className="bookmark" onClick={handleBookmarkToggle} type='button' alt='empty bookmark'/>}
+						{bookmarkToggle && <BsFillBookmarkFill className="bookmark" onClick={handleBookmarkToggle} type='button' alt='filled bookmark'/>}
 					</div>
 				</div>
 		</section>
