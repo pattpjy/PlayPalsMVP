@@ -4,8 +4,7 @@ import activitiesData from "../../apiCalls/dummyData";
 import "./ToDos.scss";
 
 export default function ToDos({id}) {
-  
-	const filterActivities = activitiesData.filter(activity => activity.id === id);
+	const filterActivities = activitiesData.activities.filter(activity => activity.id === id);
 
   const activityCards = filterActivities.map((activity) => {
     return (
