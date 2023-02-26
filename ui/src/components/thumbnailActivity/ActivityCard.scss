@@ -4,7 +4,8 @@
   background-color: $lightLavendar;
 	border-radius: $fifthBorderRadius;
 	border: $oceanBorder;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: .1em;
   grid-template-columns: 1fr, 1fr, 1fr;
   margin: 0;
@@ -15,7 +16,7 @@
 .activity-name {
   background-color: $lightLavendar;
 	color: $purpleBerry;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -24,22 +25,34 @@
 .activity-image,
 .activity-bookmark{
   background-color: $lightLavendar;
+  color: $purpleBerry;
 }
 
 .pics-container{
+  align-items: center;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.activity-link,
+.tv-dials{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.activity-link{
+  width: 50%;
+}
+
 .activity-image{
-  align-self: center;
   border: .1em solid $pink;
   border-radius: $fifthBorderRadius;
   font-size: .8em;
-  width: 60%;
+  width: 100%;
 }
 
+.heartmark,
 .bookmark{
   color: $purpleBerry;
   height: 2em;
