@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Profile.scss";
 import { RiFileList2Line } from "react-icons/ri";
 
 export default function Profile({finishedActivities}) {
     console.log("Finished Activities: ", finishedActivities)
+    const [reportCard, setReportCard] = useState(finishedActivities);
     //function to give feedback
     return (
         <section className="report">

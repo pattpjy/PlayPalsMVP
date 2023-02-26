@@ -1,40 +1,40 @@
-import React from "react";
+import React, {useState} from "react";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import "./AllActivities.scss";
 import ActivityCard from "../thumbnailActivity/ThumbnailActivityCard";
 
-export default function AllActivities({activities, setActivityData}) {
-  // console.log("AllActivities activities props", activities)
+export default function AllActivities({activities}) {
+  const [selectedActivities, setSelectedActivities] = useState(activities)
   const animatedComponents = makeAnimated();
   //create animated wrappers around components passed in as arguments
   //keep here in AllActivities.js for filter dropdown mechanics
 
-  //move state up. App.js should be able to pass a "pure" activities list for 'originalActivities'
-
-  const originalActivities = activities;
-  //filter variables, const needed here for filter mechanism, also pass down filter function kept in App.js?
-  //keep this here for the return below
   const activityOptions = [
     { value: "indoor", label: "indoor" },
     { value: "outdoor", label: "outdoor" },
   ];
 
-  //?
-  const showFilterActivities = (arrayOfInput) => {
+  const showFilteredActivities = (arrayOfInput) => {
     if (arrayOfInput.length === 0) {
-      setActivityData(originalActivities);
+      console.log(selectedActivities)
+      setSelectedActivities(activities);
       return;
     }
-    const filterActivities = originalActivities.filter((act) => {
+
+    const filteredActivities = activities.filter((act) => {
       return arrayOfInput.every((input) => act[input.value] === true);
     });
-    setActivityData(filterActivities);
+
+    setSelectedActivities(filteredActivities);
+    // return selectedActivities;
+    //^^this is the filter state
   };
 
+//activities here needs to be true to state here, not original full list because of the filter
 
-
-  const activityCards = activities.map((activity) => {
+  const activityCards = selectedActivities.map((activity) => {
+    //  ^^current JSX   ^^selectedActivities array
     return (
         <ActivityCard
           key={activity.id}
@@ -60,7 +60,7 @@ export default function AllActivities({activities, setActivityData}) {
         components={animatedComponents}
         isMulti
         options={activityOptions}
-        onChange={(e) => showFilterActivities(e)}
+        onChange={(e) => showFilteredActivities(e)}
       />
       <div className="activity-container">
         {activityCards}
