@@ -9,21 +9,21 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/ElBrewster/Stretch-Tech-Project">
+  <a href="https://github.com/ElBrewster/PlayPals">
     Add Image or Logo of the project
   </a>
 
-<h3 align="center">Stretch Tech Project</h3>
+<h3 align="center">PlayPals</h3>
 
   <p align="center">
-   Stretch Tech Project
+   PlayPals
     <br />
-    <a href="https://github.com/ElBrewster/Stretch-Tech-Project"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ElBrewster/PlayPals"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ElBrewster/Stretch-Tech-Project/issues">Report Bug</a>
+    <a href="https://github.com/ElBrewster/PlayPals/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ElBrewster/Stretch-Tech-Project/issues">Request Feature</a>
+    <a href="https://github.com/ElBrewster/PlayPals/issues">Request Feature</a>
   </p>
 </div>
 
