@@ -1,23 +1,21 @@
 @use "src/index.scss" as *;
 
 .activity-card {
-	background-color: $lightLavendar;
-	border-radius: .2em;
-	border: .1em solid $ocean;
-  padding: .2em;
-  width: 90%;
-}
-
-img {
-  border-radius: 5px;
-	width: 60%;
+  background-color: $lightLavendar;
+	border-radius: $fifthBorderRadius;
+	border: $oceanBorder;
+  display: grid;
+  gap: .1em;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  margin: 0;
+  padding: .1em;
+  width: 95%;
 }
 
 .activity-name {
   background-color: $lightLavendar;
-	color: $purpleberry;
+	color: $purpleBerry;
   font-weight: 500;
-  margin: 0;
   text-decoration: none;
 }
 
@@ -28,7 +26,22 @@ img {
   background-color: $lightLavendar;
 }
 
-.activity-image{
-  font-size: .8em;
+.pics-container{
+  display: flex;
+  flex-direction: row;
 }
 
+.activity-link,
+.activity-image{
+  align-self: center;
+  border: .1em solid $pink;
+  border-radius: $fifthBorderRadius;
+  font-size: .8em;
+  width: 60%;
+}
+
+.bookmark{
+  color: $purpleBerry;
+  height: 2em;
+  width: 2em;
+}

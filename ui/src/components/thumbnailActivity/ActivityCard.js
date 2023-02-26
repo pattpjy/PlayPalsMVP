@@ -14,15 +14,19 @@ export default function ActivityCard({ id, name, startAge, endAge, image, activi
 
 	return (
 		<section id={id} className='activity-card'>
-			<Link to={`/Activities/${id}`} state={{id: id, activities: activities}} style={{ textDecoration: 'none' }}>
 				<div className='title'>
 					<p className='activity-name'>{name}</p>
 					<p className="activity-age">{startAge} months-{endAge} months</p>
 				</div>
-				<img className="activity-image" src={image} alt={name} width={300} />
-			</Link>
-			{!toggle && <BsBookmark onClick={handleToggle} type='button' alt='blankBookmark'/>}
-			{toggle && <BsFillBookmarkFill onClick={handleToggle} type='button' alt='blankBookmark'/>}
+				<div className="pics-container">
+					<Link to={`/Activities/${id}`} state={{id: id, activities: activities}} style={{ textDecoration: 'none' }} className="activity-link">
+						<img className="activity-image" src={image} alt={name} width={300} />
+					</Link>
+
+					{!toggle && <BsBookmark className="bookmark" onClick={handleToggle} type='button' alt='blankBookmark'/>}
+
+					{toggle && <BsFillBookmarkFill className="bookmark" onClick={handleToggle} type='button' alt='blankBookmark'/>}
+				</div>
 		</section>
 	)
 }
