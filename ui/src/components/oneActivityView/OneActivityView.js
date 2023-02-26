@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 export default function ActivityInfoView() {
 	const location = useLocation()
 	const currentId = location.state.id
+	// console.log("location.state:", location.state)
 	const allActivities = location.state.activities
 	// console.log('location', allActivities)
 	// console.log('currentid', currentId)

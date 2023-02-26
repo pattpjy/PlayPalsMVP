@@ -1,4 +1,5 @@
 import "./App.scss";
+import activitiesData from "../../apiCalls/dummyData";
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import HeaderNav from "../headerNav/HeaderNav";
@@ -11,6 +12,9 @@ import ErrorPage from "../errorPage/ErrorPage";
 
 
 function App() {
+	const [activities, setActivityData] = useState(activitiesData.activities);
+	//I've passed down 'setActivityData' function to AllActivities.js, but not sure how this is working?
+	console.log("App activities", activities)
 	//allActivityData, function
 	//favorites, favorites function ...favorites
 	//to-do
@@ -19,7 +23,7 @@ function App() {
       <HeaderNav />
 			<Routes>
 				<Route path='/' element={<LandingPage />}/>
-				<Route path='/Activities' element={<AllActivities />}/>
+				<Route path='/Activities' element={<AllActivities activities={activities}/>}/>
 				<Route path='/Saved-Activities' element={<ToDos />} />
 				<Route path='/Activities/:id' element={<OneActivityView />}/>
         		<Route path='/Profile' element={<Profile />}/>
