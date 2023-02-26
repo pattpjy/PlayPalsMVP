@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
-import ActivityCard from "../thumbnailActivity/thumbnailActivityCard";
+import ActivityCard from "../thumbnailActivity/ThumbnailActivityCard";
 import activitiesData from "../../apiCalls/dummyData.js";
 import "./AllActivities.scss";
 

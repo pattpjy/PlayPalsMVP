@@ -1,6 +1,6 @@
 import React, {useState}from "react";
 import { Link } from "react-router-dom";
-import './ActivityCard.scss'
+import "./ThumbnailActivityCard.scss";
 import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs";
 import { MdFavoriteBorder, MdFavorite} from "react-icons/md";
 
