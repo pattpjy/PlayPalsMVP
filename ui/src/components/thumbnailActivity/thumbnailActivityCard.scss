@@ -1,0 +1,60 @@
+@use "src/index.scss" as *;
+
+.activity-card {
+  background-color: $lightLavendar;
+	border-radius: $fifthBorderRadius;
+	border: $oceanBorder;
+  display: flex;
+  flex-direction: column;
+  gap: .1em;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  margin: 0;
+  padding: 1em;
+  width: 95%;
+}
+
+.activity-name {
+  background-color: $lightLavendar;
+	color: $purpleBerry;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.activity-name,
+.activity-age,
+.activity-image,
+.activity-bookmark{
+  background-color: $lightLavendar;
+  color: $purpleBerry;
+}
+
+.pics-container{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.tv-dials{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.activity-link{
+  width: 50%;
+}
+
+.activity-image{
+  border: .2em solid $pink;
+  border-radius: $fifthBorderRadius;
+  font-size: .8em;
+  width: 100%;
+}
+
+.heartmark,
+.bookmark{
+  color: $purpleBerry;
+  height: 2em;
+  width: 2em;
+}

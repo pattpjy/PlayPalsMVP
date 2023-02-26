@@ -5,12 +5,15 @@ import HeaderNav from "../headerNav/HeaderNav";
 import LandingPage from "../landingPage/LandingPage";
 import AllActivities from "../allActivities/AllActivities";
 import ToDos from "../todo/ToDos";
-import ActivityInfoView from "../activityInfoView/ActivityInfoView";
+import OneActivityView from "../oneActivityView/OneActivityView";
 import Profile from "../profile/Profile"
 import ErrorPage from "../errorPage/ErrorPage";
 
 
 function App() {
+	//allActivityData, function
+	//favorites, favorites function ...favorites
+	//to-do
   return (
     <main className="main-app">
       <HeaderNav />
@@ -18,8 +21,8 @@ function App() {
 				<Route path='/' element={<LandingPage />}/>
 				<Route path='/Activities' element={<AllActivities />}/>
 				<Route path='/Saved-Activities' element={<ToDos />} />
-				<Route path='/Activities/:id' element={<ActivityInfoView />}/>
-        <Route path='/Profile' element={<Profile />}/>
+				<Route path='/Activities/:id' element={<OneActivityView />}/>
+        		<Route path='/Profile' element={<Profile />}/>
 				<Route path='*' element={<ErrorPage />}/>
 			</Routes>
     </main>

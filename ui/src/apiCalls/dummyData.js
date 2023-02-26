@@ -67,7 +67,7 @@ const activitiesData = {
     },
     {
       id: 6,
-      img_url: "https://nodecoders.s3.us-west-2.amazonaws.com/activitiesImg/activitiesPNG/car-painting.png8",
+      img_url: "https://nodecoders.s3.us-west-2.amazonaws.com/activitiesImg/activitiesPNG/car-painting.png",
       start_age: 12,
       end_age: 48,
       name: "car painting",
