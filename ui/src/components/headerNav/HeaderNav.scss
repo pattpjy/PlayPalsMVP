@@ -2,11 +2,12 @@
 
 .header-container {
     align-items: center;
-    background-color: $lightBlue;
-    color: $purpleberry;
+    background-color: $lightLavendar;
+    color: $purpleBerry;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 8svh;
     width: 100%;
 }
 
@@ -29,7 +30,7 @@
 .invis-button{
     background-color: rgb(0,0,0,0);
     border: none;
-    color: $purpleberry;
+    color: $purpleBerry;
 }
 
 .main-title{
@@ -41,7 +42,7 @@
 @media (min-width: 40em) {
     .header-container{
         border-bottom: .2em solid $cherry;
-        height: 10lvh;
+        min-height: 70px;
     }
     .header-nav{
         display: flex;
@@ -54,6 +55,6 @@
         width: 4em;
     }
     .main-title{
-        font-size: 4em;
+        font-size: 3.5em;
     }
 }

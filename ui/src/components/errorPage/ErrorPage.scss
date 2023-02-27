@@ -1,9 +1,16 @@
 @use "src/index.scss" as *;
-.error-message,
-.error-back-button,
+
 .error-page{
     background-color: $lightLavendar;
-    border: $oceanBorder;
+    color: $purpleBerry;
+}
+
+.error-back-button{
+    background-color: $pink;
+    border: .1em solid $candy;
     border-radius: $fifthBorderRadius;
-    color: $purpleberry;
+    color: $intensePink;
+    font-weight: 600;
+    height: 3em;
+    width: 15em;
 }

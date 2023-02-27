@@ -2,7 +2,7 @@ $cherry: rgb(205, 32, 72);
 $intensePink: rgb(213, 22, 85);
 $red: rgb(221, 30, 24);
 $blueberry: rgb(7, 57, 155);
-$purpleberry: rgb(5, 15, 153);
+$purpleBerry: rgb(5, 15, 153);
 $candy: rgb(250, 93, 253);
 $lightPinkPurple: rgb(242, 182, 231);
 $lightLavendar: rgb(213, 216, 252);
@@ -13,13 +13,12 @@ $pink: rgb(253, 158, 148);
 
 $oceanBorder: .1em solid $ocean;
 $fifthBorderRadius: .2em;
+
 *,
 body {
   background-color: $lightLavendar;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 img {
@@ -28,14 +27,8 @@ img {
 }
 
 @media (min-width: 40em) {
-  body {
-    width: 100lvw;
-  }
-}
-@media (min-width: 40em) {
   .generic-flexbox-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
     gap: 2em;
   }
 }

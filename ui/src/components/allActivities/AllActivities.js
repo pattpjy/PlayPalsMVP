@@ -1,49 +1,46 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Select from "react-select";
-// import Filter from "../filter/Filter";
 import makeAnimated from "react-select/animated";
-import ActivityCard from "../thumbnailActivity/ActivityCard";
-import activitiesData from "../../apiCalls/dummyData.js";
 import "./AllActivities.scss";
+import ActivityCard from "../thumbnailActivity/ThumbnailActivityCard";
 
-export default function AllActivities() {
-  const [activities, setActivityData] = useState(activitiesData.activities);
-  const [originalActivities] = useState(activitiesData.activities);
+export default function AllActivities({activities}) {
+  const [selectedActivities, setSelectedActivities] = useState(activities);
+
+  const animatedComponents = makeAnimated();
 
   const activityOptions = [
     { value: "indoor", label: "indoor" },
     { value: "outdoor", label: "outdoor" },
   ];
 
-  const animatedComponents = makeAnimated();
-  //create animated wrappers around components passed in as arguments
-
-  const showFilterActivities = (arrayOfInput) => {
+  const showFilteredActivities = (arrayOfInput) => {
     if (arrayOfInput.length === 0) {
-      setActivityData(originalActivities);
+      setSelectedActivities(activities);
       return;
     }
-    const filterActivities = originalActivities.filter((act) => {
+
+    const filteredActivities = activities.filter((act) => {
       return arrayOfInput.every((input) => act[input.value] === true);
     });
-    setActivityData(filterActivities);
+
+    setSelectedActivities(filteredActivities);
   };
 
-  const activityCards = activities.map((activity) => {
+  const activityCards = selectedActivities.map((activity) => {
     return (
         <ActivityCard
           key={activity.id}
           id={activity.id}
-          image={activity.path}
-          startAge={activity.startAge}
-          endAge={activity.endAge}
+          image={activity.img_url}
+          startAge={activity.start_age}
+          endAge={activity.end_age}
           name={activity.name}
           materials={activity.materials}
           instructions={activity.instructions}
           indoor={activity.indoor}
           outdoor={activity.outdoor}
-          motorSkill={activity.motorSkill}
+          motorSkill={activity.motor_skills}
           activities={activities}
         />
     );
@@ -56,7 +53,7 @@ export default function AllActivities() {
         components={animatedComponents}
         isMulti
         options={activityOptions}
-        onChange={(e) => showFilterActivities(e)}
+        onChange={(e) => showFilteredActivities(e)}
       />
       <div className="activity-container">
         {activityCards}

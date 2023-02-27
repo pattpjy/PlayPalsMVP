@@ -1,0 +1,96 @@
+@use "src/index.scss" as *;
+
+.activity-info-view-container{
+	align-items: center;
+	background-color: $pink;
+	border: .1em solid $blueberry;
+	border-radius: $fifthBorderRadius;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin-top: 1em;
+	max-width: 40em;
+	min-width: 280px;
+	width: 90%;
+}
+
+.activity-name{
+	background-color: $pink;
+	color: $blueberry;
+	margin: 0px;
+}
+
+.heart-icon,
+.check-icon,
+.bookmark-icon {
+	background-color: $pink;
+	color: $blueberry;
+	height: 2em;
+	width: 2em;
+}
+
+.picture-buttons{
+	align-items: center;
+	background-color: $pink;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 100%;
+}
+.activity-pic{
+	border: .1em solid $blueberry;
+	border-radius: $fifthBorderRadius;
+	margin-top: .8em;
+	margin-bottom: .8em;
+	width: 55%;
+	
+}
+
+.bold-span{
+	font-weight: 700;
+}
+
+.bold-span,
+.activity-age,
+.activity-materials,
+.activity-instrux {
+	background-color: $lightBlue;
+	color: $blueberry;
+	width: 100%;
+}
+.information{
+	background-color: $pink;
+
+	border-top: .1em solid $blueberry;
+	border-radius: $fifthBorderRadius;
+	width: 100%;
+}
+.heart-and-name{
+	align-items: flex-end;
+	background-color: $pink;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.buttons{
+	align-items: center;
+	background-color: $pink;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-evenly;
+}
+
+@media (min-width: 40em) {
+	.activity-info-view-container{
+		align-items: center;
+		display: flex;
+	}
+	.heart-icon,
+	.check-icon,
+	.bookmark-icon{
+		height: 3em;
+		width: 3em;
+	} 
+}

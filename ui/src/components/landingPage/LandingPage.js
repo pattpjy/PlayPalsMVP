@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.scss";
 
+
 export default function LandingPage() {
     let navigate = useNavigate()
 
