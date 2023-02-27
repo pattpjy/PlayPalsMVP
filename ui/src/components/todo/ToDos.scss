@@ -10,3 +10,15 @@
 	gap: 1em;
 	width: 100%;
 }
+
+.to-do-h2 {
+	color: $purpleBerry;
+}
+
+@media (min-width: 40em) {
+	.to-do-container {
+		display: grid;
+		gap: 1em;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
