@@ -37,9 +37,10 @@ export default function ActivityInfoView() {
 				</div>
 			</div>
 			<div className='information'>
-				<p className="activity-age">{currentActivity.start_age} months -{currentActivity.end_age} months</p>
-				<p className="activity-materials">MATERIALS:&nbsp;{currentActivity.materials}</p>
-				<p className="activity-instrux">INSTRUCTIONS:&nbsp;{currentActivity.instructions}</p>
+				<p className="activity-age">{currentActivity.start_age} months -&nbsp;{currentActivity.end_age} months</p>
+				<p className="activity-materials"><span className="bold-span">MATERIALS:
+					</span>&nbsp;{currentActivity.materials}</p>
+				<p className="activity-instrux"><span className="bold-span">INSTRUCTIONS:</span>&nbsp;{currentActivity.instructions}</p>
 			</div>
 		</section>
 	)

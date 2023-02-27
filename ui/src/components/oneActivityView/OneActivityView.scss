@@ -46,6 +46,10 @@
 	
 }
 
+.bold-span{
+	font-weight: 700;
+}
+.bold-span,
 .activity-age,
 .activity-materials,
 .activity-instrux {
@@ -60,7 +64,6 @@
 	border-radius: $fifthBorderRadius;
 	width: 100%;
 }
-
 .heart-and-name{
 	align-items: flex-end;
 	background-color: $pink;
