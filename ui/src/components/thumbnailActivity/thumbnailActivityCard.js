@@ -5,29 +5,40 @@ import { AiFillCheckCircle, AiOutlineHeart, AiFillHeart, AiOutlineCheckCircle } 
 import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs";
 
 
-export default function ActivityCard({id, name, startAge, endAge, image, activities, setSavedActivities}) {
-  const [toggle, setToggle] = useState(false);
-  const [toggleBookmark, setToggleBookmark] = useState(false);
+export default function ActivityCard({id, name, startAge, endAge, image, activities, savedActivities, setSavedActivities}) {
+//   const [toggle, setToggle] = useState(false);
+//   const [toggleBookmark, setToggleBookmark] = useState();
 
   function addToSavedActivities(grabbedId) {
-    const savedActivity = activities.find(activity => activity.id === grabbedId)
-  
-    setSavedActivities(prevState => [...prevState, savedActivity]);
+	const checked = savedActivities.find(activity => activity.id === grabbedId);
+	if(!checked) {
+		const savedActivity = activities.find(activity => activity.id === grabbedId);
+		setSavedActivities(prevState => [...prevState, savedActivity]);
+	} else {
+		return 'oops!';
+	}
   }
 
-  const handleToggle = () => {
-    setToggle(!toggle);
-  };
+  function removeFromSavedActivities(grabbedId){
+	const unbookMarked = savedActivities.filter(activity => activity.id !== grabbedId);
+	setSavedActivities(unbookMarked);
+	console.log(activities);
+  }
+
+//   const handleToggle = () => {
+//     setToggle(!toggle);
+//   };
 
   const handleBookMarkClickEmpty = () => {
-	setToggleBookmark(prevState => prevState ? false : true);
+	// setToggleBookmark(true);
 	addToSavedActivities(id)
-	//grab id to set state in App
+
 	console.log("smile");
   }
 
   const handleBookMarkClickFull = () => {
-	setToggleBookmark(!toggleBookmark);
+	// setToggleBookmark(false);
+	removeFromSavedActivities(id);
 	console.log("FROWN");
   }
 
@@ -45,14 +56,19 @@ export default function ActivityCard({id, name, startAge, endAge, image, activit
 					</Link>
 
 					<div className="tv-dials">
-						{!toggle && <AiOutlineHeart className="heartmark" onClick={handleToggle} type='button' alt='heart icon'/>}
-						{toggle && <AiFillHeart className="heartmark2" onClick={handleToggle} type='button' alt='filled heart icon'/>}
+						{/* {!toggle && <AiOutlineHeart className="heartmark" onClick={handleToggle} type='button' alt='heart icon'/>}
+						{toggle && <AiFillHeart className="heartmark2" onClick={handleToggle} type='button' alt='filled heart icon'/>} */}
+                    <button className="invis-button" onClick={handleBookMarkClickEmpty}>
+                        <BsBookmark className="bookmark" alt="bookmark icon" />
+                    </button>
+					<button className="invis-button" onClick={handleBookMarkClickFull}>
+                        <BsFillBookmarkFill className="bookmark2" alt="bookmark icon" />
+                    </button>
+						{/* {!toggleBookmark && <BsBookmark className="bookmark" onClick={handleBookMarkClickEmpty} type='button' alt='empty bookmark icon'/>}
+						{toggleBookmark && <BsFillBookmarkFill className="bookmark2" onClick={handleBookMarkClickFull} type='button' alt='filled bookmark icon'/>} */}
 
-						{!toggleBookmark && <BsBookmark className="bookmark" onClick={handleBookMarkClickEmpty} type='button' alt='empty bookmark icon'/>}
-						{toggleBookmark && <BsFillBookmarkFill className="bookmark2" onClick={handleBookMarkClickFull} type='button' alt='filled bookmark icon'/>}
-
-						{!toggle && <AiOutlineCheckCircle className="check-circle" onClick={handleToggle} type='button' alt='empty checkmark circle icon'/>}
-						{toggle && <AiFillCheckCircle className="check-circle2" onClick={handleToggle} type='button' alt='filled checkmark circle icon'/>}
+						{/* {!toggle && <AiOutlineCheckCircle className="check-circle" onClick={handleToggle} type='button' alt='empty checkmark circle icon'/>}
+						{toggle && <AiFillCheckCircle className="check-circle2" onClick={handleToggle} type='button' alt='filled checkmark circle icon'/>} */}
 					</div>
 				</div>
 		</section>
