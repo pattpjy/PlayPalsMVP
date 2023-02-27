@@ -4,11 +4,8 @@ import makeAnimated from "react-select/animated";
 import "./AllActivities.scss";
 import ActivityCard from "../thumbnailActivity/ThumbnailActivityCard";
 
-export default function AllActivities({ activities }) {
+export default function AllActivities({ activities, setSavedActivities }) {
   const [selectedActivities, setSelectedActivities] = useState(activities);
-  useEffect(() => {
-    setSelectedActivities(activities);
-  }, [activities]);
 
   const animatedComponents = makeAnimated();
 
@@ -45,6 +42,7 @@ export default function AllActivities({ activities }) {
         outdoor={activity.outdoor}
         motorSkill={activity.motor_skills}
         activities={activities}
+        setSavedActivities={setSavedActivities}
       />
     );
   });
