@@ -23,7 +23,7 @@ export default function ActivityInfoView() {
 	return (
 		<section className='activity-info-view-container'>
 			<div className='heart-and-name'>
-				<h3 className='name'>{currentActivity.name}</h3>
+				<h3 className='activity-name'>{currentActivity.name}</h3>
 				{!toggle && <AiOutlineHeart onClick={handleToggle} type='button' alt='blankHeart' className="heart-icon"/>}
 				{toggle && <AiFillHeart onClick={handleToggle} type='button' alt='filledHeart' className="heart-icon"/>}
 			</div>
@@ -37,9 +37,9 @@ export default function ActivityInfoView() {
 				</div>
 			</div>
 			<div className='information'>
-				<p>{currentActivity.start_age} months -{currentActivity.end_age} months</p>
-				<p>MATERIALS <br /> {currentActivity.materials}</p>
-				<p>INSTRUCTIONS <br /> {currentActivity.instructions}</p>
+				<p className="activity-age">{currentActivity.start_age} months -{currentActivity.end_age} months</p>
+				<p className="activity-materials">MATERIALS:&nbsp;{currentActivity.materials}</p>
+				<p className="activity-instrux">INSTRUCTIONS:&nbsp;{currentActivity.instructions}</p>
 			</div>
 		</section>
 	)
