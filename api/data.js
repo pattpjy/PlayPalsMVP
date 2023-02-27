@@ -130,5 +130,6 @@ const activitiesData = [
     motor_skills: "gross",
   },
 ];
+
  
 module.exports = activitiesData;
