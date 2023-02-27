@@ -26,7 +26,7 @@ export default function ToDos({id}) {
 
     return (
         <>
-          <h2>To-Do List</h2>
+          <h2 className="to-do-h2">To-Do List</h2>
           <section className="to-do-container">
             {activityCards}
           </section>
