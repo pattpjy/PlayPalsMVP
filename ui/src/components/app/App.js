@@ -14,15 +14,12 @@ import { getAllActivities } from "../../apiCalls/apiCalls";
 function App() {
   const [activities, setActivityData] = useState([]);
 
-  
-  //Pass down these functions and have toggle add/spread in selections. State of filtered/favorites/to-do will be here.
-  //filtered favorites, favorites function ...favorites (heart)
   const [favorites, setFavorites] = useState([]);
   
   //filtered to-do (bookmark)
   const [savedActivities, setSavedActivities] = useState([]);
-  console.log("savedActivities: ", savedActivities)
-  //filtered finished, for profile/resume calculations (and possible third emoji on AllActivities list?)
+  console.log("savedActivities in App: ", savedActivities)
+
   const [finishedActivities, setFinishedActivities] = useState([]);
 
   //ApiCall-->KEEP BELOW STATE
@@ -34,12 +31,6 @@ function App() {
     fetchData();
   }, []);
 
-  // function addToSavedActivities(grabbedId) {
-  //   const savedActivity = activities.find(activity => activity.id === grabbedId)
-  
-  //   setSavedActivities(prevState => [...prevState, savedActivity]);
-  // }
-
   return (
     <main className="main-app">
       <HeaderNav />
@@ -47,7 +38,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route
           path="/Activities"
-          element={<AllActivities activities={activities} setSavedActivities={setSavedActivities}/>}
+          element={<AllActivities activities={activities} savedActivities={savedActivities} setSavedActivities={setSavedActivities}/>}
         />
         <Route
           path="/Saved-Activities"
