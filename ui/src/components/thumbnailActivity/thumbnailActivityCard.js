@@ -60,9 +60,11 @@ export default function ActivityCard({id, name, startAge, endAge, image, activit
 						{toggle && <AiFillHeart className="heartmark2" onClick={handleToggle} type='button' alt='filled heart icon'/>} */}
                     <button className="invis-button" onClick={handleBookMarkClickEmpty}>
                         <BsBookmark className="bookmark" alt="bookmark icon" />
+						<p>ADD</p>
                     </button>
 					<button className="invis-button" onClick={handleBookMarkClickFull}>
                         <BsFillBookmarkFill className="bookmark2" alt="bookmark icon" />
+						<p>REMOVE</p>
                     </button>
 						{/* {!toggleBookmark && <BsBookmark className="bookmark" onClick={handleBookMarkClickEmpty} type='button' alt='empty bookmark icon'/>}
 						{toggleBookmark && <BsFillBookmarkFill className="bookmark2" onClick={handleBookMarkClickFull} type='button' alt='filled bookmark icon'/>} */}
