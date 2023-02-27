@@ -3,14 +3,14 @@
 .activity-card {
   background-color: $lightLavendar;
 	border-radius: $fifthBorderRadius;
-	border: $oceanBorder;
+	border: .1em solid $blueberry;
   display: flex;
   flex-direction: column;
   gap: .1em;
   grid-template-columns: 1fr, 1fr, 1fr;
   margin: 0;
   padding: 1em;
-  width: 95%;
+  width: 90%;
 }
 
 .activity-name {
@@ -25,7 +25,7 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .tv-dials{
@@ -45,7 +45,7 @@
   text-decoration: none;
 }
 .activity-image{
-  border: .2em solid $pink;
+  border: .2em solid $purpleBerry;
   border-radius: $fifthBorderRadius;
   font-size: .8em;
   width: 100%;
