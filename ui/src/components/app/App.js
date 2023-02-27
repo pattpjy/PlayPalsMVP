@@ -35,6 +35,7 @@ function App() {
 
   //filtered finished, for profile/resume calculations (and possible third emoji on AllActivities list?)
   const [finishedActivities, setFinishedActivities] = useState([]);
+  
   return (
     <main className="main-app">
       <HeaderNav />

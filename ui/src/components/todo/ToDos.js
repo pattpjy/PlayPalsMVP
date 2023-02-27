@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ActivityCard from "../thumbnailActivity/thumbnailActivityCard";
+import ActivityCard from "../thumbnailActivity/ThumbnailActivityCard";
 import activitiesData from "../../apiCalls/dummyData";
 import "./ToDos.scss";
 
