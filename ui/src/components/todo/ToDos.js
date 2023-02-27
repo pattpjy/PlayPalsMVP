@@ -3,25 +3,24 @@ import ActivityCard from "../thumbnailActivity/ThumbnailActivityCard";
 import activitiesData from "../../apiCalls/dummyData";
 import "./ToDos.scss";
 
-export default function ToDos({ id }) {
-  const filterActivities = activitiesData.activities.filter(
-    (activity) => activity.id === id
-  );
+export default function ToDos({ savedActivities }) {
 
-  const activityCards = filterActivities.map((activity) => {
+  const activityCards = savedActivities.map((activity) => {
     return (
       <ActivityCard
         key={activity.id}
         id={activity.id}
-        image={activity.path}
-        startAge={activity.startAge}
-        endAge={activity.endAge}
+        image={activity.img_url}
+        startAge={activity.start_age}
+        endAge={activity.end_age}
         name={activity.name}
         materials={activity.materials}
         instructions={activity.instructions}
         indoor={activity.indoor}
         outdoor={activity.outdoor}
-        motorSkill={activity.motorSkill}
+        motorSkill={activity.motor_skills}
+        // activities={activities}
+        // setSavedActivities={setSavedActivities}
       />
     );
   });
