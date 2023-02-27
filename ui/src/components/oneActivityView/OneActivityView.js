@@ -7,12 +7,11 @@ import { useLocation } from "react-router-dom";
 export default function ActivityInfoView() {
 	const location = useLocation()
 	const currentId = location.state.id
-	// console.log("location.state:", location.state)
+
 	const allActivities = location.state.activities
-	// console.log('location', allActivities)
-	// console.log('currentid', currentId)
+
 	const currentActivity = allActivities.find(activity => activity.id === currentId)
-	// console.log('currentActivity', currentActivity)
+
 	const [toggle, setToggle] = useState(false)
 
 	const handleToggle = () => {
@@ -40,7 +39,7 @@ export default function ActivityInfoView() {
 				<p className="activity-age">{currentActivity.start_age} months -&nbsp;{currentActivity.end_age} months</p>
 				<p className="activity-materials"><span className="bold-span">MATERIALS:
 					</span>&nbsp;{currentActivity.materials}</p>
-				<p className="activity-instrux"><span className="bold-span">INSTRUCTIONS:</span>&nbsp;{currentActivity.instructions}</p>
+				<p className="activity-instrux"><span className="bold-span">INSTRUCTIONS:</span>&nbsp;{currentActivity.instructions}.</p>
 			</div>
 		</section>
 	)
